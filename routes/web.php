@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\kelas1Controller;
+use App\Http\Controllers\kelas1\mtkkls1Controller;
 use App\Http\Controllers\kelas2Controller;
 use App\Http\Controllers\kelas3Controller;
 use App\Http\Controllers\kelas4Controller;
@@ -32,6 +33,7 @@ Route::group(['middleware' => 'CekloginMiddelware'],function(){
     });
 
     Route::get('/kelas1', [kelas1Controller::class, 'index'])->name('kelas1');
+    Route::get('/kelas1/matematika', [mtkkls1Controller::class, 'index'])->name('kelas1.mtk');
     Route::get('/kelas2', [kelas2Controller::class, 'index'])->name('kelas2');
     Route::get('/kelas3', [kelas3Controller::class, 'index'])->name('kelas3');
     Route::get('/kelas4', [kelas4Controller::class, 'index'])->name('kelas4');

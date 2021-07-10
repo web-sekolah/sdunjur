@@ -115,7 +115,7 @@
         <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-divide"></i> Matematika</h5>
         <small class="text-muted caption" style="margin-top: -5px;">" Belajar Menghitung yukk :) "
         </small><br><br>
-        <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+        <a href="{{ route('kelas1.mtk') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
       </div>
     </div>
     </div>
