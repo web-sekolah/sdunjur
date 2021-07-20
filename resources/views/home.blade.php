@@ -118,24 +118,36 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
+                <li class="nav-item">
+                  <a href="/tanyajawab/matematika" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Ruang Bertanya</a>
+                </li>
+                @if (auth()->user()->level=="guru")
+                <li class="nav-item">
+                  <a href="{{ route('register') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-user-plus"></i> Tambah Pengguna</a>
+                </li>
+                @endif
+                <li class="nav-item dropstart">
                   <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-user-graduate"></i> Masuk sebagai siswa
+                      <i class="fas fa-user-graduate @if (auth()->user()->level=="guru") d-none @endif"></i>
+                      @if (auth()->user()->level=="guru")
+                      <i class="fas fa-chalkboard-teacher"></i>
+                      @endif
+                      {{ Auth::user()->username }}
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-chalkboard-teacher"></i> Masuk sebagai guru</a></li>
-                    {{-- <li><a class="dropdown-item" href="#">Masuk sebagai guru</a></li> --}}
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink" style="width: max-content;">
+                    <li><a class="dropdown-item disabled text-muted">{{ Auth::user()->name }}</a></li>
+                    <li>
+                      <a class="dropdown-item text-danger" aria-current="page" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                      <i class="fas fa-power-off"></i> {{ __('Logout') }}
+                      </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                    </form>
+                    </li>
                   </ul>
                 </li>
-            <li class="nav-item">
-              <a href="{{ route('logout') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-power-off"></i> Logout</a>
-            </li>
-            {{-- <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li> --}}
           </ul>
         </div>
       </div>
@@ -155,8 +167,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Kelas 1</h5>
-                  <p class="card-text fw-bold" style="color:#7B241C;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="{{ route('kelas1') }}" class="btn btn-danger rounded-pill"><i class="far fa-play-circle"></i> Mulai Belajar</a>
+                  <p class="card-text fw-bold" style="color:#7B241C;">Klik tombol untuk memasuki kelas</p>
+                  <a href="{{ route('kelas1') }}" class="btn btn-danger rounded-pill"><i class="far fa-play-circle"></i> Masuk kelas</a>
                 </div>
               </div>
             </div>
@@ -174,8 +186,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Kelas 2</h5>
-                  <p class="card-text fw-bolder" style="color: #154360;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="{{ route('kelas2') }}" class="btn btn-primary rounded-pill"><i class="far fa-play-circle"></i> Mulai Belajar</a>
+                  <p class="card-text fw-bolder" style="color: #154360;">Klik tombol untuk memasuki kelas</p>
+                  <a href="{{ route('kelas2') }}" class="btn btn-primary rounded-pill"><i class="far fa-play-circle"></i> Masuk kelas</a>
                 </div>
               </div>
             </div>
@@ -197,8 +209,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Kelas 3</h5>
-                  <p class="card-text fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="{{ route('kelas3') }}" class="btn btn-success rounded-pill"><i class="far fa-play-circle"></i> Mulai Belajar</a>
+                  <p class="card-text fw-bold">Klik tombol untuk memasuki kelas</p>
+                  <a href="{{ route('kelas3') }}" class="btn btn-success rounded-pill"><i class="far fa-play-circle"></i> Masuk kelas</a>
                 </div>
               </div>
             </div>
@@ -216,8 +228,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Kelas 4</h5>
-                  <p class="card-text fw-bold" style="color: #424949;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="{{ route('kelas4') }}" class="btn btn-secondary rounded-pill"><i class="far fa-play-circle"></i> Mulai Belajar</a>
+                  <p class="card-text fw-bold" style="color: #424949;">Klik tombol untuk memasuki kelas</p>
+                  <a href="{{ route('kelas4') }}" class="btn btn-secondary rounded-pill"><i class="far fa-play-circle"></i> Masuk kelas</a>
                 </div>
               </div>
             </div>
@@ -239,8 +251,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Kelas 5</h5>
-                  <p class="card-text fw-bolder" style="color: #7D6608;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="{{ route('kelas5') }}" class="btn btn-warning rounded-pill"><i class="far fa-play-circle"></i> Mulai Belajar</a>
+                  <p class="card-text fw-bolder" style="color: #7D6608;">Klik tombol untuk memasuki kelas</p>
+                  <a href="{{ route('kelas5') }}" class="btn btn-warning rounded-pill"><i class="far fa-play-circle"></i> Masuk kelas</a>
                 </div>
               </div>
             </div>
@@ -258,8 +270,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Kelas 6</h5>
-                  <p class="card-text fw-bolder" style="color: white;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <a href="{{ route('kelas6') }}" class="btn btn-dark rounded-pill"><i class="far fa-play-circle"></i> Mulai Belajar</a>
+                  <p class="card-text fw-bolder" style="color: white;">Klik tombol untuk memasuki kelas</p>
+                  <a href="{{ route('kelas6') }}" class="btn btn-dark rounded-pill"><i class="far fa-play-circle"></i> Masuk kelas</a>
                 </div>
               </div>
             </div>

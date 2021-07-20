@@ -71,29 +71,33 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="/index" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
+                    <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
                   </li>
                 <li class="nav-item">
-                    <a href="{{ route('logout') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Obrolan Kelas</a>
-                  </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-graduate"></i> Masuk sebagai siswa
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#"><i class="fas fa-chalkboard-teacher"></i> Masuk sebagai guru</a></li>
-                      {{-- <li><a class="dropdown-item" href="#">Masuk sebagai guru</a></li> --}}
-                    </ul>
-                  </li>
-              <li class="nav-item">
-                <a href="{{ route('logout') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-power-off"></i> Logout</a>
-              </li>
-              {{-- <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li> --}}
+                    <li><a href="#" class="nav-link text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Obrolan Kelas</a></li>
+                </li>
+                <li class="nav-item dropstart">
+                  <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user-graduate @if (auth()->user()->level=="guru") d-none @endif"></i>
+                      @if (auth()->user()->level=="guru")
+                      <i class="fas fa-chalkboard-teacher"></i>
+                      @endif
+                      {{ Auth::user()->username }}
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink" style="width: max-content;">
+                    <li><a class="dropdown-item disabled text-muted">{{ Auth::user()->name }}</a></li>
+                    <li>
+                      <a class="dropdown-item text-danger" aria-current="page" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                      <i class="fas fa-power-off"></i> {{ __('Logout') }}
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                      @csrf
+                      </form>
+                    </li>
+                  </ul>
+                </li>
             </ul>
           </div>
         </div>
@@ -204,12 +208,12 @@
                         <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
                             <div class="row g-0">
                             <div class="col-md-4">
-                              <img src="{{ asset('gambar/ikonenglish.png') }}" class="img-fluid rounded-start mt-5" alt="...">
+                              <img src="{{ asset('gambar/mulok.png') }}" class="img-fluid rounded-start mt-5" alt="...">
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-language"></i> Bahasa Inggris</h5>
-                                <small class="text-muted caption" style="margin-top: -5px;">"Let's learn english together"
+                                <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-language"></i> Muatan Lokal</h5>
+                                <small class="text-muted caption" style="margin-top: -5px;">"Mri perdalam ilmu muatan lokal"
                                 </small><br><br>
                                 <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                               </div>
