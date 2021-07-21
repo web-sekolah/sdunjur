@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-    <title>Hello, world!</title>
+    <title>Login</title>
     <style>
         .card{
             padding: 18px;
@@ -75,15 +75,15 @@
     </style>
   </head>
   <body style="background-image: url('{{asset('gambar/bgberanda.jpg')}}')"><br><br><br><br>
-    <div class="mapelcaption container" style="width: max-content; padding: 42px; border-radius: 5px; background-image: url('{{ asset('gambar/chalkboard.jpg') }}');" >
+    <div class="mapelcaption container mt-5" style="width: max-content; padding: 42px; border-radius: 5px; background-image: url('{{ asset('gambar/chalkboard.jpg') }}');" >
         <h2 class="text-center"><i class="fas fa-user-graduate"></i> LOGIN</h2><br><br>
         <div  class="container">
          <form method="POST" action="{{route('login')}}" class="mr-2">
             @csrf
              <label for="username"><i class="far fa-user"></i> Username</label><br>
-             <input class="" id="username" name="username" type="text" placeholder="Username disini..."><br><br>
-             <label for="password"><i class="fas fa-unlock-alt"></i> Password</label><br>
-             <input id="password" name="password" type="password" placeholder="Password disini...">
+             <input class="mt-2" id="username" name="username" type="text" placeholder="Username di sini..."><br><br>
+             <label for="password" class="mt-4"><i class="fas fa-unlock-alt"></i> Password</label><br>
+             <input id="password" class="mt-2" name="password" type="password" placeholder="Password di sini...">
              <div>
                  <br>
                 <center><button class="btn btn tombol fw-bold">Login</button></center>
