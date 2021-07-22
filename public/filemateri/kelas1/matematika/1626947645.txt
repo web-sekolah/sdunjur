@@ -1,0 +1,13 @@
+Table formsubmitan :
+id
+Judul
+tanggal dan waktu (datetime)
+
+table submitan
+id
+nama
+tanggal dan waktu
+file
+
+
+
