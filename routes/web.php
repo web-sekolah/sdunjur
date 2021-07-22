@@ -58,8 +58,11 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/kelas1/matematika', [mtkkls1Controller::class, 'index'])->name('kelas1.mtk');
     Route::get('/kelas1/matematika/download/{file}', [mtkkls1Controller::class, 'download']);
     Route::get('/kelas1/matematika/download/{file}', [mtkkls1Controller::class, 'download']);
-    Route::post('/kelas1/matematika/addsubmission', [mtkkls1Controller::class, 'addsubmission']);
     Route::post('/kelas1/matematika/addsubmit', [mtkkls1Controller::class, 'addsubmit']);
+    Route::get('/kelas1/matematika/destroysubmit/{id}', [mtkkls1Controller::class, 'destroysubmit']);
+    Route::get('/kelas1/matematika/submit/ubah/{id}', [mtkkls1Controller::class, 'editsubmit']);
+    Route::post('/kelas1/matematika/submit/update/{id}', [mtkkls1Controller::class, 'updatesubmit']);
+    Route::get('/kelas1/matematika/submit/download/{file}', [mtkkls1Controller::class, 'downloadsubmit']);
 
 
 
@@ -129,6 +132,10 @@ Route::middleware(['auth', 'cekLevel:guru'])->group(function () {
     Route::get('/kelas1/matematika/kuis/tambah', [mtkkls1Controller::class, 'quiz']);
     Route::post('/kelas1/matematika/kuis/simpan', [mtkkls1Controller::class, 'addquiz']);
     Route::get('/kelas1/matematika/kuis/hapus/{id}', [mtkkls1Controller::class, 'destroykuis']);
+    Route::post('/kelas1/matematika/addsubmission', [mtkkls1Controller::class, 'addsubmission']);
+    Route::get('/kelas1/matematika/submisionform/delete/{id}', [mtkkls1Controller::class, 'destroyformsubmit']);
+    
+
 });
 
 

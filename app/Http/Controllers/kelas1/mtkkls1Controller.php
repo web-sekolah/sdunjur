@@ -98,6 +98,7 @@ class mtkkls1Controller extends Controller
                 $matka->tanggal = $tanggal;
                 $matka->hari = $hari;
                 $matka->Judul = $Judul;
+                $matka->Topik = $Topik;
                 $matka->waktumulai = $waktumulai;
                 $matka->waktuselesai = $waktuselesai;
                 $matka->vidio = $vidio;
@@ -235,12 +236,11 @@ class mtkkls1Controller extends Controller
             'file.required'=>'Anda tidak mengirim file apapun',
         ]);
 
-        kls1mtksubmitan::create([
-            'nama' => $request->nama,
-            'file' => $request->file,
-            'submit_id' => $request->submit_id,
-        ]);
-
+        // kls1mtksubmitan::create([
+        //     'nama' => $request->nama,
+        //     'file' => $request->file,
+        //     'submit_id' => $request->submit_id,
+        // ]);
         $nama = $request->nama;
         $file = $request->file;
         $namafile = time().'.'.$file->getClientOriginalextension();
@@ -255,5 +255,45 @@ class mtkkls1Controller extends Controller
 
         
         return redirect('/kelas1/matematika')->with('success','Submission telah kamu telah terkirim');
+    }
+
+    public function destroysubmit($id){
+        $submited = kls1mtksubmitan::find($id);
+        $submited->delete();
+        return redirect('/kelas1/matematika')->with('success', 'Data Telah Dihapus!');
+    }
+
+    public function downloadsubmit(Request $request,$file){
+        return response()->download(public_path('filemateri/kelas1/matematika/'.$file));
+    }
+
+    public function destroyformsubmit($id){
+        $submited = kls1mtksubmision::find($id);
+        $submited->delete();
+        return redirect('/kelas1/matematika')->with('success','Data Telah Dihapus');
+    }
+
+    public function editsubmit($id){
+        $submited = kls1mtksubmitan::find($id);
+        return view('kelas1/tambah/editsubmision',['submited' => $submited]);
+    }
+
+    public function updatesubmit(Request $request, $id){
+        $file = $request->file('file');
+        $namafile = time().'.'.$file->getClientOriginalextension();
+        $file->move(public_path('filemateri/kelas1/matematika'),$namafile);
+
+        $id = $request->id;
+        $nama = $request->nama;
+        $submit_id = $request->submit_id;
+
+        $submited = kls1mtksubmitan::find($id);
+        $submited->id = $request->id;
+        $submited->nama = $request->nama;
+        $submited->submit_id = $request->submit_id;
+        $submited->file = $namafile;
+
+        $submited->save();
+        return redirect('/kelas1/matematika')->with('success','Tugas anda Berhasil Diubah');
     }
 }
