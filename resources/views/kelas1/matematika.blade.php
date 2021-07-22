@@ -1514,7 +1514,9 @@
                 <ul class="nav nav-pills card-header-pills">
                   <li class="nav-item ">
                     <div class="d-flex">
+                      @if (auth()->user()->level=="guru")
                       <a class="btn btn-primary fw-bold ms-auto" href="/kelas1/matematika/kuis/tambah"><i class="fas fa-plus-square"></i> Tambah Quis</a>&nbsp;
+                      @endif
                       <a href="/kelas1/matematika" class="btn btn-outline-secondary"><i class="fas fa-sync-alt refresh"></i></a>&nbsp;
                       <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#policy"><i class="fas fa-tasks"></i></button>
                     </div>
@@ -1658,7 +1660,9 @@
           <div class="tab-pane fade bg-light" id="submision" role="tabpanel" aria-labelledby="list-profile-list">
               <div class="card">
                 <h5 class="card-header">
+                  @if (auth()->user()->level=="guru")
                   <button id="tambahsubmitan" class="btn btn-primary"><i class="fas fa-plus-square"></i> Tambah Submitan</button>
+                  @endif
                   <a href="/kelas1/matematika" class="btn btn-outline-secondary"><i class="fas fa-sync-alt refresh"></i></a>&nbsp;
                 </h5>
                 <div class="card-body">
