@@ -45,6 +45,9 @@
           color: blue;
           background-color: white;
         }
+        .scrool{
+          overflow-y: scroll; height:400px;
+        }
     </style>
     <title>Obrolan Kelas 1</title>
   </head>
@@ -113,8 +116,8 @@
             <a class="btn btn fw-bold form-komentar buatkuis" href="#"><i class="fas fa-calendar-plus"></i> Pertanyaan</a>
           </div>
         </div>
-        <div class="col-md-10 bg-light">
-          <div class="tab-content" id="nav-tabContent">
+        <div class="col-md-10 bg-light scrollspy-example" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+          <div class="tab-content scrool" id="nav-content">
             <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                 <form class="container mt-3 ajukan-pertanyaan" action="/kelas1/ObrolanKelas/tanyajawab/AddComment" enctype="multipart/form-data" method="post" >
                     {{ method_field('POST') }}

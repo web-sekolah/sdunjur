@@ -114,7 +114,7 @@
           </div>
         </div>
         <div class="col-md-10 bg-light">
-          <div class="tab-content" id="nav-tabContent">
+          <div class="tab-content" id="nav-tabContent" style="overflow-y: scroll; height:400px;">
             <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                 <form class="container mt-3 ajukan-pertanyaan" action="/kelas3/ObrolanKelas/tanyajawab/ipa/AddComment" enctype="multipart/form-data" method="post" >
                     {{ method_field('POST') }}

@@ -15,8 +15,8 @@ class mtkkls1Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls1mtksubmision::all();
-            $submit = klsmtksubmision::all();
-            $kuis = mtkkuismodel::all();
+            $submit = klsmtksubmision::orderBy('id','desc')->get();
+            $kuis = mtkkuismodel::orderBy('id','desc')->get();
             $submited = kls1mtksubmitan::all();
             $data = mtkkls1::where('Topik','LIKE','%'.$request->keyword.'%')
             ->orWhere('tanggal','LIKE','%'.$request->keyword.'%')
@@ -30,8 +30,8 @@ class mtkkls1Controller extends Controller
             ->paginate(10);
         }else{
             $data = mtkkls1::paginate(10);
-            $submit = kls1mtksubmision::all();
-            $kuis = mtkkuismodel::all();
+            $submit = kls1mtksubmision::orderBy('id','desc')->get();
+            $kuis = mtkkuismodel::orderBy('id','desc')->get();
             $submited = kls1mtksubmitan::all();
         }
         return view('kelas1/matematika',['data'=>$data,'kuis'=>$kuis,'submit'=>$submit,'submited'=>$submited]);

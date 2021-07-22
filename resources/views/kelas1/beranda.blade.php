@@ -74,7 +74,7 @@
                     <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="/dashboard"><i class="fas fa-home"></i> Home</a>
                   </li>
                 <li class="nav-item">
-                    <li><a href="kelas1/ObrolanKelas" class="nav-link text-light" aria-current="page" href="kelas1/ObrolanKelas"><i class="fas fa-comments"></i> Obrolan Kelas</a></li>
+                    <li><a href="kelas1/ObrolanKelas" class="nav-link text-light" aria-current="page" href="kelas1/ObrolanKelas"><i class="fas fa-comments"></i> Ruang Bertanya</a></li>
                 </li>
                 <li class="nav-item dropstart">
                   <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

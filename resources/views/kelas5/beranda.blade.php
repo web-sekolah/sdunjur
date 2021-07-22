@@ -74,17 +74,8 @@
                     <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="/dashboard"><i class="fas fa-home"></i> Home</a>
                   </li>
                 <li class="nav-item">
-                    <a href="kelas5/ObrolanKelas" class="nav-link container text-light" aria-current="page" href="kelas5/ObrolanKelas"><i class="fas fa-comments"></i> Obrolan Kelas</a>
+                    <a href="kelas5/ObrolanKelas" class="nav-link container text-light" aria-current="page" href="kelas5/ObrolanKelas"><i class="fas fa-comments"></i> Ruang Bertanya</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-graduate"></i> Masuk sebagai siswa
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#"><i class="fas fa-chalkboard-teacher"></i> Masuk sebagai guru</a></li>
-                      {{-- <li><a class="dropdown-item" href="#">Masuk sebagai guru</a></li> --}}
-                    </ul>
-                  </li>
               <li class="nav-item">
                 <a href="{{ route('logout') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-power-off"></i> Logout</a>
               </li>
