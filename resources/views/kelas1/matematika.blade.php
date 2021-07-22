@@ -1753,7 +1753,11 @@
                         <th>Waktu Pengingat</th>
                         <td>:</td>
                         <td>
-                          {{\Carbon\Carbon::now()->diffForHumans(Carbon\Carbon::parse($sub->created_at))}}
+                          @php
+                          $time = \Carbon\Carbon::now()->diffForHumans($sub->bataswaktu);
+                          str_replace('after','more',$sub->bataswaktu);
+                          @endphp
+                          {{$time}}
                         </td>
                       </tr>
                     </table>
@@ -1944,6 +1948,16 @@
     maxFileSize: 1
   }
 </script>
+
+      @error('judul')
+     <script src="../js/judul.js"></script>
+      @enderror
+      @error('bataswaktu')
+      <script src="../js/deadline.js"></script>
+      @enderror
+      @error('file')
+      <script src="../js/file.js"></script>
+      @enderror
 
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
