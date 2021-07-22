@@ -118,9 +118,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a href="/tanyajawab/matematika" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Ruang Bertanya</a>
-                </li>
+                </li> -->
                 @if (auth()->user()->level=="guru")
                 <li class="nav-item">
                   <a href="{{ route('register') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-user-plus"></i> Tambah Pengguna</a>

@@ -59,7 +59,7 @@
             transform: scale(1.7);
         }
     </style>
-    <title>Web-Kelas</title>
+    <title>Kelas 3</title>
   </head>
   <body style="background-image: url('{{ asset('gambar/bgberanda.jpg') }}')">
     <nav class="navbar container mt-3 navbar-expand-lg navbar-light bg-transparent">
@@ -71,11 +71,11 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="/index" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
+                    <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="/dashboard"><i class="fas fa-home"></i> Home</a>
                   </li>
                 <li class="nav-item">
-                    <a href="{{ route('logout') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Obrolan Kelas</a>
-                  </li>
+                    <a href="kelas3/ObrolanKelas" class="nav-link container text-light" aria-current="page" href="kelas3/ObrolanKelas"><i class="fas fa-comments"></i> Obrolan Kelas</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user-graduate"></i> Masuk sebagai siswa
