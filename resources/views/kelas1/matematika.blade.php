@@ -75,6 +75,7 @@
         .card-quiz{
           box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
           margin-bottom: 10px;
+          margin-top: 20px;
         }
         .quiz-time{
           color: #E74C3C;
@@ -200,14 +201,14 @@
     </div>
       </div>
     <div class="mainlist mt-4 mb-4">  
-    <div class="col-10 container mt-4">
+    <div class="col-10 container mt-4 mb-5">
         <div class="list-group list-group-horizontal-sm " id="list-tab" role="tablist">
             <a class="list-group-item list-group-item-action active fw-bold text-center" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home"><i class="fas fa-book"></i> Materi</a>
             <a class="list-group-item list-group-item-action fw-bold text-center" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"><i class="fas fa-pencil-alt"></i> Exercise</a>
             <a class="list-group-item list-group-item-action fw-bold text-center" id="list-profile-list" data-bs-toggle="list" href="#submision" role="tab" aria-controls="list-profile"><i class="fas fa-calendar-check"></i> Submision</a>
         </div>
      </div>
-      <div class="container mt-2">
+      <div class="container mt-2 mb-4">
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active container" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
             <div class="row">
@@ -1637,7 +1638,7 @@
                     </div>
                   </div>
                     @else
-                    <div class="card card-quiz text-center container  mb-2" style="width: 18rem;">
+                    <div class="card card-quiz text-center container mb-2 " style="width: 18rem;">
                       <div class="card-body">
                         <center><small class="bg-secondary rounded-pill text-light" style="width: max-content; padding-right: 3px; padding-left: 3px; font-size: 10px;"><i class="fas fa-bolt"></i>Segera Hadir</small> </center>
                         <h5 class="card-title">{{$quiz->topik}}</h5>
@@ -1665,7 +1666,7 @@
                   @endif
                   <a href="/kelas1/matematika" class="btn btn-outline-secondary"><i class="fas fa-sync-alt refresh"></i></a>&nbsp;
                 </h5>
-                <div class="card-body">
+                <div class="card-body mt-4">
                 {{--alert error--}}
                 <div class="container">
                   {{-- @error('judul')
@@ -1721,8 +1722,8 @@
                   </div>
                 {{-- list submitan --}}
                 @foreach ($submit as $sub)
-                <div class="card text-center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
-                  <div class="card-body">
+                <div class="card text-center mt-4" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                  <div class="card-body mt-3">
                     <h5 class="card-title">{{$sub->judul}} <a data-bs-toggle="modal" data-bs-target="#deletekuis{{$sub->id}}" style="font-size: 15px;" class="text-muted"><i class="far fa-trash-alt"></i></a></h5>
                     {{-- Konfirmasi hapus materi modals --}}
                      <!-- Modal -->

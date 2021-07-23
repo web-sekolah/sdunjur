@@ -107,12 +107,12 @@
       </div>
       <br><br>
 
-    <div class="container">
-    <div class="row container">
-    <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+    <div class="container ">
+    <div class="row container mb-5">
+    <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
     <div class="row g-0">
     <div class="col-md-4">
-      <img src="{{ asset('gambar/matematika.png') }}" class="img-fluid rounded-start mt-2" alt="...">
+      <img src="{{ asset('gambar/matematika.png') }}" class="img-fluid rounded-start mt-4" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -125,7 +125,7 @@
     </div>
     </div>
 
-    <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+    <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
         <div class="row g-0">
         <div class="col-md-4">
           <img src="{{ asset('gambar/ikonindonesia.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
@@ -141,7 +141,7 @@
         </div>
         </div>
 
-        <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+        <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
             <div class="row g-0">
             <div class="col-md-4">
                 <img src="{{ asset('gambar/ikonipa.png') }}" class="img-fluid rounded-start mt-4" alt="...">
@@ -157,7 +157,7 @@
             </div>
             </div>
 
-            <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+            <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                 <div class="row g-0">
                 <div class="col-md-4">
                   <img src="{{ asset('gambar/ikonips.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
@@ -173,7 +173,7 @@
                 </div>
                 </div>
 
-                <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                     <div class="row g-0">
                     <div class="col-md-4">
                       <img src="{{ asset('gambar/ikonolahraga.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
@@ -189,7 +189,7 @@
                     </div>
                     </div>
 
-                    <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                    <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                         <div class="row g-0">
                         <div class="col-md-4">
                           <img src="{{ asset('gambar/ikonseeni.png') }}" class="img-fluid rounded-start mt-2" alt="...">
@@ -204,7 +204,7 @@
                         </div>
                         </div>
                 
-                        <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                        <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                             <div class="row g-0">
                             <div class="col-md-4">
                               <img src="{{ asset('gambar/mulok.png') }}" class="img-fluid rounded-start mt-5" alt="...">
@@ -220,7 +220,7 @@
                             </div>
                             </div>
 
-                            <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                            <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                                 <div class="row g-0">
                                 <div class="col-md-4">
                                   <img src="{{ asset('gambar/images.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
@@ -236,7 +236,7 @@
                                 </div>
                               </div>
 
-                              <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                              <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                                 <div class="row g-0">
                                 <div class="col-md-4">
                                   <img src="{{ asset('gambar/pancasila.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
