@@ -1668,7 +1668,7 @@
                 <div class="card-body">
                 {{--alert error--}}
                 <div class="container">
-                  @error('judul')
+                  {{-- @error('judul')
                   <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <strong>ERROR!</strong> {{$message}}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -1685,7 +1685,7 @@
                     <strong>ERROR!</strong> {{$message}}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
-                  @enderror
+                  @enderror --}}
                 </div>
                   {{-- form tambah submission --}}
                   <div class="card mb-4 formtambah">
@@ -1948,16 +1948,16 @@
     maxFileSize: 1
   }
 </script>
-
-      @error('judul')
-     <script src="../js/judul.js"></script>
-      @enderror
-      @error('bataswaktu')
-      <script src="../js/deadline.js"></script>
-      @enderror
-      @error('file')
-      <script src="../js/file.js"></script>
-      @enderror
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+@error('judul')
+<script src="{{asset('../js/judul.js')}}"></script>
+ @enderror
+ @error('bataswaktu')
+ <script src="{{asset('../js/deadline.js')}}"></script>
+ @enderror
+ @error('file')
+ <script src="{{asset('../js/file.js')}}"></script>
+ @enderror
 
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->

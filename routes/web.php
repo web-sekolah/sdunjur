@@ -124,11 +124,41 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/kelas1/matematika/submit/ubah/{id}', [mtkkls1Controller::class, 'editsubmit']);
     Route::post('/kelas1/matematika/submit/update/{id}', [mtkkls1Controller::class, 'updatesubmit']);
     Route::get('/kelas1/matematika/submit/download/{file}', [mtkkls1Controller::class, 'downloadsubmit']);
+    // 
+    // Bahasa indonesia
+    Route::get('/kelas1/bindonesia', [bindkls1Controller::class, 'index'])->name('kelas1.bind');
+    Route::get('/kelas1/bindonesia/download/{file}', [bindkls1Controller::class, 'download']);
+    Route::get('/kelas1/bindonesia/download/{file}', [bindls1Controller::class, 'download']);
+    Route::post('/kelas1/bindonesia/addsubmit', [bindkls1Controller::class, 'addsubmit']);
+    Route::get('/kelas1/bindonesia/destroysubmit/{id}', [bindkls1Controller::class, 'destroysubmit']);
+    Route::get('/kelas1/bindonesia/submit/ubah/{id}', [bindkls1Controller::class, 'editsubmit']);
+    Route::post('/kelas1/bindonesia/submit/update/{id}', [bindkls1Controller::class, 'updatesubmit']);
+    Route::get('/kelas1/bindonesia/submit/download/{file}', [bindkls1Controller::class, 'downloadsubmit']);
+    // 
+    // Bahasa IPA
+    Route::get('/kelas1/ipa', [ipskls1Controller::class, 'index'])->name('kelas1.ipa');
+    Route::get('/kelas1/ipa/download/{file}', [ipskls1Controller::class, 'download']);
+    Route::get('/kelas1/ipa/download/{file}', [ipskls1Controller::class, 'download']);
+    Route::post('/kelas1/ipa/addsubmit', [ipskls1Controller::class, 'addsubmit']);
+    Route::get('/kelas1/ipa/destroysubmit/{id}', [ipskls1Controller::class, 'destroysubmit']);
+    Route::get('/kelas1/ipa/submit/ubah/{id}', [ipskls1Controller::class, 'editsubmit']);
+    Route::post('/kelas1/ipa/submit/update/{id}', [ipskls1Controller::class, 'updatesubmit']);
+    Route::get('/kelas1/ipa/submit/download/{file}', [ipskls1Controller::class, 'downloadsubmit']);
+    // 
+    // Bahasa IPA
+    Route::get('/kelas1/ips', [ipskls1Controller::class, 'index'])->name('kelas1.ips');
+    Route::get('/kelas1/ips/download/{file}', [ipskls1Controller::class, 'download']);
+    Route::get('/kelas1/ips/download/{file}', [ipskls1Controller::class, 'download']);
+    Route::post('/kelas1/ips/addsubmit', [ipskls1Controller::class, 'addsubmit']);
+    Route::get('/kelas1/ips/destroysubmit/{id}', [ipskls1Controller::class, 'destroysubmit']);
+    Route::get('/kelas1/ips/submit/ubah/{id}', [ipskls1Controller::class, 'editsubmit']);
+    Route::post('/kelas1/ips/submit/update/{id}', [ipskls1Controller::class, 'updatesubmit']);
+    Route::get('/kelas1/ips/submit/download/{file}', [ipskls1Controller::class, 'downloadsubmit']);
+    // 
 
 
 
     // Ruang Bertanya kelas 1
-
     Route::get('/kelas1/ObrolanKelas', [tanyamatkaController1::class, 'index']);
 
      // Ruang Matematika
