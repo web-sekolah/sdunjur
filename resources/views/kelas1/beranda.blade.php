@@ -59,7 +59,7 @@
             transform: scale(1.7);
         }
     </style>
-    <title>Kelas 1</title>
+    <title>BackToSchool</title>
   </head>
   <body style="background-image: url('{{ asset('gambar/bgberanda.jpg') }}')">
     <nav class="navbar container mt-3 navbar-expand-lg navbar-light bg-transparent">
@@ -197,8 +197,7 @@
                         <div class="col-md-8">
                           <div class="card-body">
                             <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-paint-brush"></i> Seni Budaya</h5>
-                            <small class="text-muted caption" style="margin-top: -5px;">"Mari berkreatifitas dan kembangkan bakat senimu"
-                            </small><br><br>
+                            <small class="text-muted caption" style="margin-top: -5px;">"Mari berkreatifitas dan kembangkan bakat senimu"</small><br><br>
                             <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                           </div>
                         </div>
@@ -213,7 +212,7 @@
                             <div class="col-md-8">
                               <div class="card-body">
                                 <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-language"></i> Muatan Lokal</h5>
-                                <small class="text-muted caption" style="margin-top: -5px;">"Mri perdalam ilmu muatan lokal"
+                                <small class="text-muted caption" style="margin-top: -5px;">"Mari perdalam ilmu muatan lokal"
                                 </small><br><br>
                                 <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                               </div>
@@ -224,7 +223,7 @@
                             <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
                                 <div class="row g-0">
                                 <div class="col-md-4">
-                                  <img src="{{ asset('gambar/ikonagama.png') }}" class="img-fluid rounded-start mt-2" alt="...">
+                                  <img src="{{ asset('gambar/images.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                   <div class="card-body">
@@ -235,12 +234,24 @@
                                   </div>
                                 </div>
                                 </div>
+                              </div>
+
+                              <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                                <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img src="{{ asset('gambar/pancasila.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
                                 </div>
-
-
-
-            
-      </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-bible"></i> PPKN</h5>
+                                    <small class="text-muted caption" style="margin-top: -5px;">"Bhineka Tunggal Ika"
+                                    </small><br><br>
+                                    <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>   
+                            </div>
 
 
     

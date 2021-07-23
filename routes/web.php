@@ -145,7 +145,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::post('/kelas1/ipa/submit/update/{id}', [ipskls1Controller::class, 'updatesubmit']);
     Route::get('/kelas1/ipa/submit/download/{file}', [ipskls1Controller::class, 'downloadsubmit']);
     // 
-    // Bahasa IPA
+    // Bahasa IPS
     Route::get('/kelas1/ips', [ipskls1Controller::class, 'index'])->name('kelas1.ips');
     Route::get('/kelas1/ips/download/{file}', [ipskls1Controller::class, 'download']);
     Route::get('/kelas1/ips/download/{file}', [ipskls1Controller::class, 'download']);
@@ -154,6 +154,56 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/kelas1/ips/submit/ubah/{id}', [ipskls1Controller::class, 'editsubmit']);
     Route::post('/kelas1/ips/submit/update/{id}', [ipskls1Controller::class, 'updatesubmit']);
     Route::get('/kelas1/ips/submit/download/{file}', [ipskls1Controller::class, 'downloadsubmit']);
+    // 
+    // Olahraga 
+    Route::get('/kelas1/pjk', [ipskls1Controller::class, 'index'])->name('kelas1.pjk');
+    Route::get('/kelas1/pjk/download/{file}', [pjkkls1Controller::class, 'download']);
+    Route::get('/kelas1/pjk/download/{file}', [pjkkls1Controller::class, 'download']);
+    Route::post('/kelas1/pjk/addsubmit', [pjkkls1Controller::class, 'addsubmit']);
+    Route::get('/kelas1/pjk/destroysubmit/{id}', [pjkkls1Controller::class, 'destroysubmit']);
+    Route::get('/kelas1/pjk/submit/ubah/{id}', [pjkkls1Controller::class, 'editsubmit']);
+    Route::post('/kelas1/pjk/submit/update/{id}', [pjkkls1Controller::class, 'updatesubmit']);
+    Route::get('/kelas1/pjk/submit/download/{file}', [pjkkls1Controller::class, 'downloadsubmit']);
+    // 
+    // Senibudaya
+    Route::get('/kelas1/sbd', [sbdkls1Controller::class, 'index'])->name('kelas1.sbd');
+    Route::get('/kelas1/sbd/download/{file}', [sbdkls1Controller::class, 'download']);
+    Route::get('/kelas1/sbd/download/{file}', [sbdkls1Controller::class, 'download']);
+    Route::post('/kelas1/sbd/addsubmit', [sbdkls1Controller::class, 'addsubmit']);
+    Route::get('/kelas1/sbd/destroysubmit/{id}', [sbdkls1Controller::class, 'destroysubmit']);
+    Route::get('/kelas1/sbd/submit/ubah/{id}', [sbdkls1Controller::class, 'editsubmit']);
+    Route::post('/kelas1/sbd/submit/update/{id}', [sbdkls1Controller::class, 'updatesubmit']);
+    Route::get('/kelas1/sbd/submit/download/{file}', [sbdkls1Controller::class, 'downloadsubmit']);
+    // 
+    // Muatan Lokal
+    Route::get('/kelas1/mulok', [mulokkls1Controller::class, 'index'])->name('kelas1.mulok');
+    Route::get('/kelas1/mulok/download/{file}', [mulokkls1Controller::class, 'download']);
+    Route::get('/kelas1/mulok/download/{file}', [mulokkls1Controller::class, 'download']);
+    Route::post('/kelas1/mulok/addsubmit', [mulokkls1Controller::class, 'addsubmit']);
+    Route::get('/kelas1/mulok/destroysubmit/{id}', [mulokkls1Controller::class, 'destroysubmit']);
+    Route::get('/kelas1/mulok/submit/ubah/{id}', [mulokkls1Controller::class, 'editsubmit']);
+    Route::post('/kelas1/mulok/submit/update/{id}', [mulokkls1Controller::class, 'updatesubmit']);
+    Route::get('/kelas1/mulok/submit/download/{file}', [mulokkls1Controller::class, 'downloadsubmit']);
+    // 
+    // Agama
+    Route::get('/kelas1/agama', [mulokkls1Controller::class, 'index'])->name('kelas1.agama');
+    Route::get('/kelas1/agama/download/{file}', [mulokkls1Controller::class, 'download']);
+    Route::get('/kelas1/agama/download/{file}', [mulokkls1Controller::class, 'download']);
+    Route::post('/kelas1/agama/addsubmit', [mulokkls1Controller::class, 'addsubmit']);
+    Route::get('/kelas1/agama/destroysubmit/{id}', [mulokkls1Controller::class, 'destroysubmit']);
+    Route::get('/kelas1/agama/submit/ubah/{id}', [mulokkls1Controller::class, 'editsubmit']);
+    Route::post('/kelas1/agama/submit/update/{id}', [mulokkls1Controller::class, 'updatesubmit']);
+    Route::get('/kelas1/agama/submit/download/{file}', [mulokkls1Controller::class, 'downloadsubmit']);
+    // 
+    // PPKN
+    Route::get('/kelas1/ppkn', [mulokkls1Controller::class, 'index'])->name('kelas1.ppkn');
+    Route::get('/kelas1/ppkn/download/{file}', [mulokkls1Controller::class, 'download']);
+    Route::get('/kelas1/ppkn/download/{file}', [mulokkls1Controller::class, 'download']);
+    Route::post('/kelas1/ppkn/addsubmit', [mulokkls1Controller::class, 'addsubmit']);
+    Route::get('/kelas1/ppkn/destroysubmit/{id}', [mulokkls1Controller::class, 'destroysubmit']);
+    Route::get('/kelas1/ppkn/submit/ubah/{id}', [mulokkls1Controller::class, 'editsubmit']);
+    Route::post('/kelas1/ppkn/submit/update/{id}', [mulokkls1Controller::class, 'updatesubmit']);
+    Route::get('/kelas1/ppkn/submit/download/{file}', [mulokkls1Controller::class, 'downloadsubmit']);
     // 
 
 
