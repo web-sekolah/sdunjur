@@ -429,7 +429,7 @@
                    {{--end0ffebruaty--}}
                   <div class="tab-pane fade" id="maret" role="tabpanel" aria-labelledby="list-settings-list">
                     @foreach ($data as $item)
-                    @if(\Carbon\Carbon::parse($item->tanggal)->format('F')=='Maret')
+                    @if(\Carbon\Carbon::parse($item->tanggal)->format('F')=='March')
                       <div class="card activitycard">
                           <div class="card-header d-flex">
                               <h5>{{ $item->hari }}, {{ $item->tanggal }}</h5>

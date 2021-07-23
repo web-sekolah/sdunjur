@@ -135,7 +135,7 @@
             <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-flag"></i> Bahasa Indonesia</h5>
             <small class="text-muted caption" style="margin-top: -5px;">"Mari belajar menggunakan bahasa Indonesia yang baik dan benar"
             </small><br><br>
-            <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+            <a href="{{ route('kelas1.bind') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
           </div>
         </div>
         </div>
@@ -151,7 +151,7 @@
                 <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-atom"></i> Ilmu Pengetahuan Alam</h5>
                 <small class="text-muted caption" style="margin-top: -5px;">"Disini kita akan belajar lebih dalam mengenai Alam"
                 </small><br><br>
-                <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                <a href="{{ route('kelas1.ipa') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
               </div>
             </div>
             </div>
@@ -167,7 +167,7 @@
                     <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-globe-asia"></i> Ilmu Pengetahuan Sosial</h5>
                     <small class="text-muted caption" style="margin-top: -5px;">"Ayo belajar tentang kondisi bumi, Sejarah Indonesia, dan cara bersosialisasi asyik loh"
                     </small><br><br>
-                    <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                    <a href="{{ route('kelas1.ips') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                   </div>
                 </div>
                 </div>
@@ -183,7 +183,7 @@
                         <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-futbol"></i> Pendidikan Jasmani</h5>
                         <small class="text-muted caption" style="margin-top: -5px;">"Mari berolahraga dan menjalani kehidupan sehat supaya kita ga kena corona"
                         </small><br><br>
-                        <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                        <a href="{{ route('kelas1.pjk') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                       </div>
                     </div>
                     </div>
@@ -198,7 +198,7 @@
                           <div class="card-body">
                             <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-paint-brush"></i> Seni Budaya</h5>
                             <small class="text-muted caption" style="margin-top: -5px;">"Mari berkreatifitas dan kembangkan bakat senimu"</small><br><br>
-                            <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                            <a href="{{ route('kelas1.sbd') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                           </div>
                         </div>
                         </div>
@@ -214,7 +214,7 @@
                                 <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-language"></i> Muatan Lokal</h5>
                                 <small class="text-muted caption" style="margin-top: -5px;">"Mari perdalam ilmu muatan lokal"
                                 </small><br><br>
-                                <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                                <a href="{{ route('kelas1.mulok') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                               </div>
                             </div>
                             </div>
@@ -230,7 +230,7 @@
                                     <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-bible"></i> Agama</h5>
                                     <small class="text-muted caption" style="margin-top: -5px;">"Baca kitab suci dan doa tiap hari kalo mau tumbuh"
                                     </small><br><br>
-                                    <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                                    <a href="{{ route('kelas1.agama') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                                   </div>
                                 </div>
                                 </div>
@@ -246,7 +246,7 @@
                                     <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-bible"></i> PPKN</h5>
                                     <small class="text-muted caption" style="margin-top: -5px;">"Bhineka Tunggal Ika"
                                     </small><br><br>
-                                    <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                                    <a href="{{ route('kelas1.ppkn') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                                   </div>
                                 </div>
                                 </div>

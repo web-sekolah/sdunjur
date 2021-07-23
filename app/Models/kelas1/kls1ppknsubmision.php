@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class kls1ppknsubmision extends Model
 {
     use HasFactory;
+    protected $table = 'kls1ppknsubmision';
+
+    protected $fillable = ['id','judul','bataswaktu'];
+
+    protected $primarykey = 'id';
 }
+

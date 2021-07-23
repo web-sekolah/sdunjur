@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class kls1ipasubmision extends Model
 {
     use HasFactory;
+    protected $table = 'kls1ipasubmision';
+
+    protected $fillable = ['id','judul','bataswaktu'];
+
+    protected $primarykey = 'id';
 }
