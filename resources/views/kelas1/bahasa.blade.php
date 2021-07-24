@@ -104,7 +104,7 @@
                     <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Tanya Guru</a>
+                    <a href="#" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Ruang Bertanya</a>
                   </li>
                   <li class="nav-item dropstart">
                     <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -1802,9 +1802,7 @@
                           <tr>
                             <td>{{ $i }}</</td>
                             <td>{{$tugas->nama}}</td>
-                            <td>
-                              <a href="/kelas1/bahasa/submit/download/{{$tugas->file}}" class="link-secondary"><i class="fas fa-file-download"> {{$tugas->file}}</i></a>
-                            </td>
+                            <td><a href="/kelas1/bindonesia/submit/download/{{$tugas->file}}" class="link-secondary"><i class="fas fa-file-download"> {{$tugas->file}}</i></a></td>
                             @if ($tugas->created_at->isBefore($sub->bataswaktu))
                                 <td class="table-success">Tepat Waktu</td>
                             @else
@@ -1819,6 +1817,7 @@
                         </table>
                       </div>
                     </div>
+
                   </div>
                   @foreach ($submited as $tugas)
                   @if (Auth::user()->name == $tugas->nama &&  $sub->id == $tugas->submit_id)

@@ -15,7 +15,7 @@ class ppknkls1Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls1ppknsubmision::all();
-            $submit = klsppknsubmision::orderBy('id','desc')->get();
+            $submit = kls1ppknsubmision::orderBy('id','desc')->get();
             $kuis = ppknkuismodel::orderBy('id','desc')->get();
             $submited = kls1ppknsubmitan::all();
             $data = ppknkls1::where('Topik','LIKE','%'.$request->keyword.'%')
@@ -26,10 +26,9 @@ class ppknkls1Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')
-            ->paginate(10);
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
         }else{
-            $data = ppknkls1::paginate(10);
+            $data = ppknkls1::all();
             $submit = kls1ppknsubmision::orderBy('id','desc')->get();
             $kuis = ppknkuismodel::orderBy('id','desc')->get();
             $submited = kls1ppknsubmitan::all();

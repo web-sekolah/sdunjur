@@ -104,7 +104,7 @@
                     <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Tanya Guru</a>
+                    <a href="#" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Ruang Bertanya</a>
                   </li>
                   <li class="nav-item dropstart">
                     <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -1817,6 +1817,7 @@
                         </table>
                       </div>
                     </div>
+
                   </div>
                   @foreach ($submited as $tugas)
                   @if (Auth::user()->name == $tugas->nama &&  $sub->id == $tugas->submit_id)

@@ -15,7 +15,7 @@ class mulokkls1Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls1muloksubsmision::all();
-            $submit = klsmuloksubsmision::orderBy('id','desc')->get();
+            $submit = kls1muloksubsmision::orderBy('id','desc')->get();
             $kuis = mulokkuismodel::orderBy('id','desc')->get();
             $submited = kls1muloksubmitan::all();
             $data = mulokkls1::where('Topik','LIKE','%'.$request->keyword.'%')
@@ -26,10 +26,9 @@ class mulokkls1Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')
-            ->paginate(10);
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
         }else{
-            $data = mulokkls1::paginate(10);
+            $data = mulokkls1::all();
             $submit = kls1muloksubsmision::orderBy('id','desc')->get();
             $kuis = mulokkuismodel::orderBy('id','desc')->get();
             $submited = kls1muloksubmitan::all();

@@ -15,7 +15,7 @@ class sbdkls1Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls1sbdsubmision::all();
-            $submit = klssbdsubsmision::orderBy('id','desc')->get();
+            $submit = kls1sbdsubsmision::orderBy('id','desc')->get();
             $kuis = sbdkuismodel::orderBy('id','desc')->get();
             $submited = kls1sbdsubmitan::all();
             $data = sbdkls1::where('Topik','LIKE','%'.$request->keyword.'%')
@@ -26,10 +26,9 @@ class sbdkls1Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')
-            ->paginate(10);
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
         }else{
-            $data = sbdkls1::paginate(10);
+            $data = sbdkls1::all();
             $submit = kls1sbdsubsmision::orderBy('id','desc')->get();
             $kuis = sbdkuismodel::orderBy('id','desc')->get();
             $submited = kls1sbdsubmitan::all();

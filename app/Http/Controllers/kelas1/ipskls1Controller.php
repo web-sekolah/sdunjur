@@ -15,7 +15,7 @@ class ipskls1Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls1ipssubmision::all();
-            $submit = klsipssubmision::orderBy('id','desc')->get();
+            $submit = kls1ipssubmision::orderBy('id','desc')->get();
             $kuis = ipskuismodel::orderBy('id','desc')->get();
             $submited = kls1ipssubmitan::all();
             $data = ipskls1::where('Topik','LIKE','%'.$request->keyword.'%')
@@ -26,10 +26,9 @@ class ipskls1Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')
-            ->paginate(10);
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
         }else{
-            $data = ipskls1::paginate(10);
+            $data = ipskls1::all();
             $submit = kls1ipssubmision::orderBy('id','desc')->get();
             $kuis = ipskuismodel::orderBy('id','desc')->get();
             $submited = kls1ipssubmitan::all();

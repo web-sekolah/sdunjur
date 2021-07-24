@@ -15,7 +15,7 @@ class bindkls1Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls1bindsubmision::all();
-            $submit = klsbindsubmision::orderBy('id','desc')->get();
+            $submit = kls1bindsubmision::orderBy('id','desc')->get();
             $kuis = bindkuismodel::orderBy('id','desc')->get();
             $submited = kls1bindsubmitan::all();
             $data = bindkls1::where('Topik','LIKE','%'.$request->keyword.'%')
@@ -26,10 +26,9 @@ class bindkls1Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')
-            ->paginate(10);
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
         }else{
-            $data = bindkls1::paginate(10);
+            $data = bindkls1::all();
             $submit = kls1bindsubmision::orderBy('id','desc')->get();
             $kuis = bindkuismodel::orderBy('id','desc')->get();
             $submited = kls1bindsubmitan::all();

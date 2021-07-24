@@ -15,7 +15,7 @@ class agamakls1Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls1agamasubsmision::all();
-            $submit = klsagamasubsmision::orderBy('id','desc')->get();
+            $submit = kls1agamasubsmision::orderBy('id','desc')->get();
             $kuis = agamakuismodel::orderBy('id','desc')->get();
             $submited = kls1agamasubmitan::all();
             $data = agamakls1::where('Topik','LIKE','%'.$request->keyword.'%')
@@ -26,10 +26,9 @@ class agamakls1Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')
-            ->paginate(10);
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
         }else{
-            $data = agamakls1::paginate(10);
+            $data = agamakls1::all();
             $submit = kls1agamasubsmision::orderBy('id','desc')->get();
             $kuis = agamakuismodel::orderBy('id','desc')->get();
             $submited = kls1agamasubmitan::all();

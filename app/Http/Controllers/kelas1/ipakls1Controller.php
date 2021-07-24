@@ -15,7 +15,7 @@ class ipakls1Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls1ipasubmision::all();
-            $submit = klsipasubmision::orderBy('id','desc')->get();
+            $submit = kls1ipasubmision::orderBy('id','desc')->get();
             $kuis = ipakuismodel::orderBy('id','desc')->get();
             $submited = kls1ipasubmitan::all();
             $data = ipakls1::where('Topik','LIKE','%'.$request->keyword.'%')
@@ -26,10 +26,9 @@ class ipakls1Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')
-            ->paginate(10);
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
         }else{
-            $data = ipakls1::paginate(10);
+            $data = ipakls1::all();
             $submit = kls1ipasubmision::orderBy('id','desc')->get();
             $kuis = ipakuismodel::orderBy('id','desc')->get();
             $submited = kls1ipasubmitan::all();
