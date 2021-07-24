@@ -15,7 +15,7 @@ class ppknkls6Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls6ppknsubmision::all();
-            $submit = klsppknsubmision::orderBy('id','desc')->get();
+            $submit = kls6ppknsubmision::orderBy('id','desc')->get();
             $kuis = ppknkuismodel::orderBy('id','desc')->get();
             $submited = kls6ppknsubmitan::all();
             $data = ppknkls6::where('Topik','LIKE','%'.$request->keyword.'%')

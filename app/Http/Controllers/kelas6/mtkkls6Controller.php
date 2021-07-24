@@ -15,7 +15,7 @@ class mtkkls6Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls6mtksubmision::all();
-            $submit = klsmtksubmision::orderBy('id','desc')->get();
+            $submit = kls6mtksubmision::orderBy('id','desc')->get();
             $kuis = mtkkuismodel::orderBy('id','desc')->get();
             $submited = kls6mtksubmitan::all();
             $data = mtkkls6::where('Topik','LIKE','%'.$request->keyword.'%')

@@ -15,7 +15,7 @@ class ipakls4Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls4ipasubmision::all();
-            $submit = klsipasubmision::orderBy('id','desc')->get();
+            $submit = kls4ipasubmision::orderBy('id','desc')->get();
             $kuis = ipakuismodel::orderBy('id','desc')->get();
             $submited = kls4ipasubmitan::all();
             $data = ipakls4::where('Topik','LIKE','%'.$request->keyword.'%')

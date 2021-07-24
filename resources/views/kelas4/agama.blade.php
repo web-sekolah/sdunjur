@@ -104,7 +104,7 @@
                     <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
                   </li>
                   <li class="nav-item">
-                    <a href="/kelas4/ObrolanKelas" class="nav-link container text-light" aria-current="page" href="/kelas4/ObrolanKelas"><i class="fas fa-comments"></i> Ruang Tanya</a>
+                    <a href="/kelas4/ObrolanKelas/tanyajawab/agama" class="nav-link container text-light" aria-current="page" href="/kelas4/ObrolanKelas/tanyajawab/agama"><i class="fas fa-comments"></i> Ruang Tanya</a>
                   </li>
                   <li class="nav-item dropstart">
                     <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

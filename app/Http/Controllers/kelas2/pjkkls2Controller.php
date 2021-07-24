@@ -15,7 +15,7 @@ class pjkkls2Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls2pjksubsmision::all();
-            $submit = klspjksubsmision::orderBy('id','desc')->get();
+            $submit = kls2pjksubsmision::orderBy('id','desc')->get();
             $kuis = pjkkuismodel::orderBy('id','desc')->get();
             $submited = kls2pjksubmitan::all();
             $data = pjkkls2::where('Topik','LIKE','%'.$request->keyword.'%')

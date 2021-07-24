@@ -15,7 +15,7 @@ class agamakls6Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls6agamasubsmision::all();
-            $submit = klsagamasubsmision::orderBy('id','desc')->get();
+            $submit = kls6agamasubsmision::orderBy('id','desc')->get();
             $kuis = agamakuismodel::orderBy('id','desc')->get();
             $submited = kls6agamasubmitan::all();
             $data = agamakls6::where('Topik','LIKE','%'.$request->keyword.'%')

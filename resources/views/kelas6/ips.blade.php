@@ -101,7 +101,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
+                    <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="/dashboard"><i class="fas fa-home"></i> Home</a>
                   </li>
                   <li class="nav-item">
                     <a href="/kelas6/ObrolanKelas/tanyajawab/ips" class="nav-link container text-light" aria-current="page" href="/kelas6/ObrolanKelas/tanyajawab/ips"><i class="fas fa-comments"></i> Ruang Tanya</a>

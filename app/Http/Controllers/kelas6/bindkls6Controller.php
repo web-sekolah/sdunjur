@@ -15,7 +15,7 @@ class bindkls6Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls6bindsubmision::all();
-            $submit = klsbindsubmision::orderBy('id','desc')->get();
+            $submit = kls6bindsubmision::orderBy('id','desc')->get();
             $kuis = bindkuismodel::orderBy('id','desc')->get();
             $submited = kls6bindsubmitan::all();
             $data = bindkls6::where('Topik','LIKE','%'.$request->keyword.'%')
