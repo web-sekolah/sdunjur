@@ -59,7 +59,7 @@
             transform: scale(1.7);
         }
     </style>
-    <title>Kelas 2</title>
+    <title>BackToSchool</title>
   </head>
   <body style="background-image: url('{{ asset('gambar/bgberanda.jpg') }}')">
     <nav class="navbar container mt-3 navbar-expand-lg navbar-light bg-transparent">
@@ -74,17 +74,30 @@
                     <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="/dashboard"><i class="fas fa-home"></i> Home</a>
                   </li>
                 <li class="nav-item">
-                    <a href="kelas2/ObrolanKelas" class="nav-link container text-light" aria-current="page" href="kelas2/ObrolanKelas"><i class="fas fa-comments"></i> Ruang Bertanya</a>
-                  </li>
-              <li class="nav-item">
-                <a href="{{ route('logout') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-power-off"></i> Logout</a>
-              </li>
-              {{-- <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li> --}}
+                    <li><a href="kelas2/ObrolanKelas" class="nav-link text-light" aria-current="page" href="kelas2/ObrolanKelas"><i class="fas fa-comments"></i> Ruang Bertanya</a></li>
+                </li>
+                <li class="nav-item dropstart">
+                  <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user-graduate @if (auth()->user()->level=="guru") d-none @endif"></i>
+                      @if (auth()->user()->level=="guru")
+                      <i class="fas fa-chalkboard-teacher"></i>
+                      @endif
+                      {{ Auth::user()->username }}
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink" style="width: max-content;">
+                    <li><a class="dropdown-item disabled text-muted">{{ Auth::user()->name }}</a></li>
+                    <li>
+                      <a class="dropdown-item text-danger" aria-current="page" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                      <i class="fas fa-power-off"></i> {{ __('Logout') }}
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                      @csrf
+                      </form>
+                    </li>
+                  </ul>
+                </li>
             </ul>
           </div>
         </div>
@@ -94,25 +107,25 @@
       </div>
       <br><br>
 
-    <div class="container">
-    <div class="row container">
-    <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+    <div class="container ">
+    <div class="row container mb-5">
+    <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
     <div class="row g-0">
     <div class="col-md-4">
-      <img src="{{ asset('gambar/matematika.png') }}" class="img-fluid rounded-start mt-2" alt="...">
+      <img src="{{ asset('gambar/matematika.png') }}" class="img-fluid rounded-start mt-4" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-divide"></i> Matematika</h5>
         <small class="text-muted caption" style="margin-top: -5px;">" Belajar Menghitung yukk :) "
         </small><br><br>
-        <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+        <a href="{{ route('kelas2.mtk') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
       </div>
     </div>
     </div>
     </div>
 
-    <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+    <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
         <div class="row g-0">
         <div class="col-md-4">
           <img src="{{ asset('gambar/ikonindonesia.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
@@ -122,13 +135,13 @@
             <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-flag"></i> Bahasa Indonesia</h5>
             <small class="text-muted caption" style="margin-top: -5px;">"Mari belajar menggunakan bahasa Indonesia yang baik dan benar"
             </small><br><br>
-            <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+            <a href="{{ route('kelas2.bind') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
           </div>
         </div>
         </div>
         </div>
 
-        <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+        <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
             <div class="row g-0">
             <div class="col-md-4">
                 <img src="{{ asset('gambar/ikonipa.png') }}" class="img-fluid rounded-start mt-4" alt="...">
@@ -138,13 +151,13 @@
                 <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-atom"></i> Ilmu Pengetahuan Alam</h5>
                 <small class="text-muted caption" style="margin-top: -5px;">"Disini kita akan belajar lebih dalam mengenai Alam"
                 </small><br><br>
-                <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                <a href="{{ route('kelas2.ipa') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
               </div>
             </div>
             </div>
             </div>
 
-            <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+            <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                 <div class="row g-0">
                 <div class="col-md-4">
                   <img src="{{ asset('gambar/ikonips.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
@@ -154,13 +167,13 @@
                     <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-globe-asia"></i> Ilmu Pengetahuan Sosial</h5>
                     <small class="text-muted caption" style="margin-top: -5px;">"Ayo belajar tentang kondisi bumi, Sejarah Indonesia, dan cara bersosialisasi asyik loh"
                     </small><br><br>
-                    <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                    <a href="{{ route('kelas2.ips') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                   </div>
                 </div>
                 </div>
                 </div>
 
-                <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                     <div class="row g-0">
                     <div class="col-md-4">
                       <img src="{{ asset('gambar/ikonolahraga.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
@@ -170,13 +183,13 @@
                         <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-futbol"></i> Pendidikan Jasmani</h5>
                         <small class="text-muted caption" style="margin-top: -5px;">"Mari berolahraga dan menjalani kehidupan sehat supaya kita ga kena corona"
                         </small><br><br>
-                        <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                        <a href="{{ route('kelas2.pjk') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                       </div>
                     </div>
                     </div>
                     </div>
 
-                    <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                    <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                         <div class="row g-0">
                         <div class="col-md-4">
                           <img src="{{ asset('gambar/ikonseeni.png') }}" class="img-fluid rounded-start mt-2" alt="...">
@@ -184,50 +197,61 @@
                         <div class="col-md-8">
                           <div class="card-body">
                             <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-paint-brush"></i> Seni Budaya</h5>
-                            <small class="text-muted caption" style="margin-top: -5px;">"Mari berkreatifitas dan kembangkan bakat senimu"
-                            </small><br><br>
-                            <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                            <small class="text-muted caption" style="margin-top: -5px;">"Mari berkreatifitas dan kembangkan bakat senimu"</small><br><br>
+                            <a href="{{ route('kelas2.sbd') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                           </div>
                         </div>
                         </div>
                         </div>
                 
-                        <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                        <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                             <div class="row g-0">
                             <div class="col-md-4">
-                              <img src="{{ asset('gambar/ikonenglish.png') }}" class="img-fluid rounded-start mt-5" alt="...">
+                              <img src="{{ asset('gambar/mulok.png') }}" class="img-fluid rounded-start mt-5" alt="...">
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-language"></i> Bahasa Inggris</h5>
-                                <small class="text-muted caption" style="margin-top: -5px;">"Let's learn english together"
+                                <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-language"></i> Muatan Lokal</h5>
+                                <small class="text-muted caption" style="margin-top: -5px;">"Mari perdalam ilmu muatan lokal"
                                 </small><br><br>
-                                <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                                <a href="{{ route('kelas2.mulok') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                               </div>
                             </div>
                             </div>
                             </div>
 
-                            <div class="card container card-mapel col-mb-3" style="max-width: 500px;">
+                            <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
                                 <div class="row g-0">
                                 <div class="col-md-4">
-                                  <img src="{{ asset('gambar/ikonagama.png') }}" class="img-fluid rounded-start mt-2" alt="...">
+                                  <img src="{{ asset('gambar/images.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                   <div class="card-body">
                                     <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-bible"></i> Agama</h5>
                                     <small class="text-muted caption" style="margin-top: -5px;">"Baca kitab suci dan doa tiap hari kalo mau tumbuh"
                                     </small><br><br>
-                                    <a href="" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                                    <a href="{{ route('kelas2.agama') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
                                   </div>
                                 </div>
                                 </div>
+                              </div>
+
+                              <div class="card container card-mapel col-mb-3 mt-4" style="max-width: 500px;">
+                                <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img src="{{ asset('gambar/pancasila.jpg') }}" class="img-fluid rounded-start mt-2" alt="...">
                                 </div>
-
-
-
-            
-      </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="color: #2874A6 ;"><i class="fas fa-bible"></i> PPKN</h5>
+                                    <small class="text-muted caption" style="margin-top: -5px;">"Bhineka Tunggal Ika"
+                                    </small><br><br>
+                                    <a href="{{ route('kelas2.ppkn') }}" style="color: #EC7063;" class="materi fw-bold">Lihat Materi <i class="fas fa-hand-point-right"></i></a>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>   
+                            </div>
 
 
     
