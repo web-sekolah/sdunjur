@@ -77,7 +77,7 @@
                     <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
                   </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link container text-light" aria-current="page" href="/kelas6/ObrolanKelas"><i class="fas fa-comments"></i> Ruang Tanya</a>
+                    <a class="nav-link container text-light" aria-current="page" href="/kelas6/ObrolanKelas"><i class="fas fa-comments"></i> Ruang Tanya</a>
                 </li>
                   <li class="nav-item dropstart">
                     <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -15,7 +15,7 @@ class agamakls4Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls4agamasubsmision::all();
-            $submit = klsagamasubsmision::orderBy('id','desc')->get();
+            $submit = kls4agamasubsmision::orderBy('id','desc')->get();
             $kuis = agamakuismodel::orderBy('id','desc')->get();
             $submited = kls4agamasubmitan::all();
             $data = agamakls4::where('Topik','LIKE','%'.$request->keyword.'%')

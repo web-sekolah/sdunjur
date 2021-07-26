@@ -15,7 +15,7 @@ class mtkkls2Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls2mtksubmision::all();
-            $submit = klsmtksubmision::orderBy('id','desc')->get();
+            $submit = kls2mtksubmision::orderBy('id','desc')->get();
             $kuis = mtkkuismodel::orderBy('id','desc')->get();
             $submited = kls2mtksubmitan::all();
             $data = mtkkls2::where('Topik','LIKE','%'.$request->keyword.'%')

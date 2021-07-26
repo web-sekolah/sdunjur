@@ -15,7 +15,7 @@ class ipskls6Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls6ipssubmision::all();
-            $submit = klsipssubmision::orderBy('id','desc')->get();
+            $submit = kls6ipssubmision::orderBy('id','desc')->get();
             $kuis = ipskuismodel::orderBy('id','desc')->get();
             $submited = kls6ipssubmitan::all();
             $data = ipskls6::where('Topik','LIKE','%'.$request->keyword.'%')

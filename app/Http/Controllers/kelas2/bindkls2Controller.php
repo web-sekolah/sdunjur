@@ -15,7 +15,7 @@ class bindkls2Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls2bindsubmision::all();
-            $submit = klsbindsubmision::orderBy('id','desc')->get();
+            $submit = kls2bindsubmision::orderBy('id','desc')->get();
             $kuis = bindkuismodel::orderBy('id','desc')->get();
             $submited = kls2bindsubmitan::all();
             $data = bindkls2::where('Topik','LIKE','%'.$request->keyword.'%')

@@ -15,7 +15,7 @@ class sbdkls2Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls2sbdsubmision::all();
-            $submit = klssbdsubsmision::orderBy('id','desc')->get();
+            $submit = kls2sbdsubsmision::orderBy('id','desc')->get();
             $kuis = sbdkuismodel::orderBy('id','desc')->get();
             $submited = kls2sbdsubmitan::all();
             $data = sbdkls2::where('Topik','LIKE','%'.$request->keyword.'%')

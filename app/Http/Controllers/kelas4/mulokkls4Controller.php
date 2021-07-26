@@ -15,7 +15,7 @@ class mulokkls4Controller extends Controller
     public function index(Request $request){
         if($request->has('keyword')){
             // $submit = kls4muloksubsmision::all();
-            $submit = klsmuloksubsmision::orderBy('id','desc')->get();
+            $submit = kls4muloksubsmision::orderBy('id','desc')->get();
             $kuis = mulokkuismodel::orderBy('id','desc')->get();
             $submited = kls4muloksubmitan::all();
             $data = mulokkls4::where('Topik','LIKE','%'.$request->keyword.'%')
