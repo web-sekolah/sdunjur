@@ -118,7 +118,7 @@
             <div class="row">
                 <div class="col-md-12 mb-2">
                     <h5 class="text-muted text-center">Masukkan File Baru</h5>
-                    <input id="file" name="file" value="{{ $submited->file }}" class="form-control form-sm" type="file">
+                    <input id="file" name="file" value="{{ $submited->file }}" class="form-control form-sm" type="file" required>
                     <input name="nama" value="{{ $submited->nama }}" class="form-control form-sm" type="hidden">
                     <input name="submit_id" value="{{ $submited->submit_id }}" class="form-control form-sm" type="hidden">
                 </div>

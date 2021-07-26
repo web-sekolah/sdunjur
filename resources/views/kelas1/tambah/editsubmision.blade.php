@@ -77,7 +77,7 @@
                     <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
                   </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Tanya Guru</a>
+                    <a href="#" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Ruang Bertanya</a>
                 </li>
                   <li class="nav-item dropstart">
                     <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -118,7 +118,7 @@
             <div class="row">
                 <div class="col-md-12 mb-2">
                     <h5 class="text-muted text-center">Masukkan File Baru</h5>
-                    <input id="file" name="file" value="{{ $submited->file }}" class="form-control form-sm" type="file">
+                    <input id="file" name="file" value="{{ $submited->file }}" class="form-control form-sm" type="file" required>
                     <input name="nama" value="{{ $submited->nama }}" class="form-control form-sm" type="hidden">
                     <input name="submit_id" value="{{ $submited->submit_id }}" class="form-control form-sm" type="hidden">
                 </div>

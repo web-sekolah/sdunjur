@@ -133,7 +133,7 @@
         </div>
       </nav>
       <div class="container mapelcaption text-center" style="width: 80%; padding: 30px; border-radius: 5px; background-image: url('{{ asset('gambar/chalkboard.jpg') }}');" >
-          <h2>Kelas 1</h2>
+          <h2>Kelas 3</h2>
           <h1>Agama</h1>
     <style>
         #clock {
