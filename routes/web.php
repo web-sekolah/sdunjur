@@ -1409,6 +1409,108 @@ Route::middleware(['auth', 'cekLevel:guru'])->group(function () {
     Route::post('/kelas3/sbd/addsubmission', [sbdkls3Controller::class, 'addsubmission']);
     Route::get('/kelas3/sbd/submisionform/delete/{id}', [sbdkls3Controller::class, 'destroyformsubmit']);
 
+    // kelas 4
+    // Matematika
+    Route::get('/kelas4/matematika/tambah', [mtkkls4Controller::class, 'create']);
+    Route::post('/kelas4/matematika/simpan', [mtkkls4Controller::class, 'add']);
+    Route::get('/kelas4/matematika/ubah/{id}', [mtkkls4Controller::class, 'edit']);
+    Route::post('/kelas4/matematika/update/{id}', [mtkkls4Controller::class, 'update']);
+    Route::get('/kelas4/matematika/hapus/{id}', [mtkkls4Controller::class, 'destroy']);
+    Route::get('/kelas4/matematika/kuis/tambah', [mtkkls4Controller::class, 'quiz']);
+    Route::post('/kelas4/matematika/kuis/simpan', [mtkkls4Controller::class, 'addquiz']);
+    Route::get('/kelas4/matematika/kuis/hapus/{id}', [mtkkls4Controller::class, 'destroykuis']);
+    Route::post('/kelas4/matematika/addsubmission', [mtkkls4Controller::class, 'addsubmission']);
+    Route::get('/kelas4/matematika/submisionform/delete/{id}', [mtkkls4Controller::class, 'destroyformsubmit']);
+    // Bahasa Indonesia
+    Route::get('/kelas4/bindonesia/tambah', [bindkls4Controller::class, 'create']);
+    Route::post('/kelas4/bindonesia/simpan', [bindkls4Controller::class, 'add']);
+    Route::get('/kelas4/bindonesia/ubah/{id}', [bindkls4Controller::class, 'edit']);
+    Route::post('/kelas4/bindonesia/update/{id}', [bindkls4Controller::class, 'update']);
+    Route::get('/kelas4/bindonesia/hapus/{id}', [bindkls4Controller::class, 'destroy']);
+    Route::get('/kelas4/bindonesia/kuis/tambah', [bindkls4Controller::class, 'quiz']);
+    Route::post('/kelas4/bindonesia/kuis/simpan', [bindkls4Controller::class, 'addquiz']);
+    Route::get('/kelas4/bindonesia/kuis/hapus/{id}', [bindkls4Controller::class, 'destroykuis']);
+    Route::post('/kelas4/bindonesia/addsubmission', [bindkls4Controller::class, 'addsubmission']);
+    Route::get('/kelas4/bindonesia/submisionform/delete/{id}', [bindkls4Controller::class, 'destroyformsubmit']);
+    // IPA
+    Route::get('/kelas4/ipa/tambah', [ipakls4Controller::class, 'create']);
+    Route::post('/kelas4/ipa/simpan', [ipakls4Controller::class, 'add']);
+    Route::get('/kelas4/ipa/ubah/{id}', [ipakls4Controller::class, 'edit']);
+    Route::post('/kelas4/ipa/update/{id}', [ipakls4Controller::class, 'update']);
+    Route::get('/kelas4/ipa/hapus/{id}', [ipakls4Controller::class, 'destroy']);
+    Route::get('/kelas4/ipa/kuis/tambah', [ipakls4Controller::class, 'quiz']);
+    Route::post('/kelas4/ipa/kuis/simpan', [ipakls4Controller::class, 'addquiz']);
+    Route::get('/kelas4/ipa/kuis/hapus/{id}', [ipakls4Controller::class, 'destroykuis']);
+    Route::post('/kelas4/ipa/addsubmission', [ipakls4Controller::class, 'addsubmission']);
+    Route::get('/kelas4/ipa/submisionform/delete/{id}', [ipakls4Controller::class, 'destroyformsubmit']);
+    // IPS
+    Route::get('/kelas4/ips/tambah', [ipskls4Controller::class, 'create']);
+    Route::post('/kelas4/ips/simpan', [ipskls4Controller::class, 'add']);
+    Route::get('/kelas4/ips/ubah/{id}', [ipskls4Controller::class, 'edit']);
+    Route::post('/kelas4/ips/update/{id}', [ipskls4Controller::class, 'update']);
+    Route::get('/kelas4/ips/hapus/{id}', [ipskls4Controller::class, 'destroy']);
+    Route::get('/kelas4/ips/kuis/tambah', [ipskls4Controller::class, 'quiz']);
+    Route::post('/kelas4/ips/kuis/simpan', [ipskls4Controller::class, 'addquiz']);
+    Route::get('/kelas4/ips/kuis/hapus/{id}', [ipskls4Controller::class, 'destroykuis']);
+    Route::post('/kelas4/ips/addsubmission', [ipskls4Controller::class, 'addsubmission']);
+    Route::get('/kelas4/ips/submisionform/delete/{id}', [ipskls4Controller::class, 'destroyformsubmit']);
+    // Olahraga
+    Route::get('/kelas4/pjk/tambah', [pjkkls4Controller::class, 'create']);
+    Route::post('/kelas4/pjk/simpan', [pjkkls4Controller::class, 'add']);
+    Route::get('/kelas4/pjk/ubah/{id}', [pjkkls4Controller::class, 'edit']);
+    Route::post('/kelas4/pjk/update/{id}', [pjkkls4Controller::class, 'update']);
+    Route::get('/kelas4/pjk/hapus/{id}', [pjkkls4Controller::class, 'destroy']);
+    Route::get('/kelas4/pjk/kuis/tambah', [pjkkls4Controller::class, 'quiz']);
+    Route::post('/kelas4/pjk/kuis/simpan', [pjkkls4Controller::class, 'addquiz']);
+    Route::get('/kelas4/pjk/kuis/hapus/{id}', [pjkkls4Controller::class, 'destroykuis']);
+    Route::post('/kelas4/pjk/addsubmission', [pjkkls4Controller::class, 'addsubmission']);
+    Route::get('/kelas4/pjk/submisionform/delete/{id}', [pjkkls4Controller::class, 'destroyformsubmit']);
+    // Muatan Lokal
+    Route::get('/kelas4/mulok/tambah', [mulokkls4Controller::class, 'create']);
+    Route::post('/kelas4/mulok/simpan', [mulokkls4Controller::class, 'add']);
+    Route::get('/kelas4/mulok/ubah/{id}', [mulokkls4Controller::class, 'edit']);
+    Route::post('/kelas4/mulok/update/{id}', [mulokkls4Controller::class, 'update']);
+    Route::get('/kelas4/mulok/hapus/{id}', [mulokkls4Controller::class, 'destroy']);
+    Route::get('/kelas4/mulok/kuis/tambah', [mulokkls4Controller::class, 'quiz']);
+    Route::post('/kelas4/mulok/kuis/simpan', [mulokkls4Controller::class, 'addquiz']);
+    Route::get('/kelas4/mulok/kuis/hapus/{id}', [mulokkls4Controller::class, 'destroykuis']);
+    Route::post('/kelas4/mulok/addsubmission', [mulokkls4Controller::class, 'addsubmission']);
+    Route::get('/kelas4/mulok/submisionform/delete/{id}', [mulokkls4Controller::class, 'destroyformsubmit']);
+    // PPKN
+    Route::get('/kelas4/ppkn/tambah', [ppknkls4Controller::class, 'create']);
+    Route::post('/kelas4/ppkn/simpan', [ppknkls4Controller::class, 'add']);
+    Route::get('/kelas4/ppkn/ubah/{id}', [ppknkls4Controller::class, 'edit']);
+    Route::post('/kelas4/ppkn/update/{id}', [ppknkls4Controller::class, 'update']);
+    Route::get('/kelas4/ppkn/hapus/{id}', [ppknkls4Controller::class, 'destroy']);
+    Route::get('/kelas4/ppkn/kuis/tambah', [ppknkls4Controller::class, 'quiz']);
+    Route::post('/kelas4/ppkn/kuis/simpan', [ppknkls4Controller::class, 'addquiz']);
+    Route::get('/kelas4/ppkn/kuis/hapus/{id}', [ppknkls4Controller::class, 'destroykuis']);
+    Route::post('/kelas4/ppkn/addsubmission', [ppknkls4Controller::class, 'addsubmission']);
+    Route::get('/kelas4/ppkn/submisionform/delete/{id}', [ppknkls4Controller::class, 'destroyformsubmit']);
+     // Agama
+     Route::get('/kelas4/agama/tambah', [agamakls4Controller::class, 'create']);
+     Route::post('/kelas4/agama/simpan', [agamakls4Controller::class, 'add']);
+     Route::get('/kelas4/agama/ubah/{id}', [agamakls4Controller::class, 'edit']);
+     Route::post('/kelas4/agama/update/{id}', [agamakls4Controller::class, 'update']);
+     Route::get('/kelas4/agama/hapus/{id}', [agamakls4Controller::class, 'destroy']);
+     Route::get('/kelas4/agama/kuis/tambah', [agamakls4Controller::class, 'quiz']);
+     Route::post('/kelas4/agama/kuis/simpan', [agamakls4Controller::class, 'addquiz']);
+     Route::get('/kelas4/agama/kuis/hapus/{id}', [agamakls4Controller::class, 'destroykuis']);
+     Route::post('/kelas4/agama/addsubmission', [agamakls4Controller::class, 'addsubmission']);
+     Route::get('/kelas4/agama/submisionform/delete/{id}', [agamakls4Controller::class, 'destroyformsubmit']);
+      // Seni Budaya
+    Route::get('/kelas4/sbd/tambah', [sbdkls4Controller::class, 'create']);
+    Route::post('/kelas4/sbd/simpan', [sbdkls4Controller::class, 'add']);
+    Route::get('/kelas4/sbd/ubah/{id}', [sbdkls4Controller::class, 'edit']);
+    Route::post('/kelas4/sbd/update/{id}', [sbdkls4Controller::class, 'update']);
+    Route::get('/kelas4/sbd/hapus/{id}', [sbdkls4Controller::class, 'destroy']);
+    Route::get('/kelas4/sbd/kuis/tambah', [sbdkls4Controller::class, 'quiz']);
+    Route::post('/kelas4/sbd/kuis/simpan', [sbdkls4Controller::class, 'addquiz']);
+    Route::get('/kelas4/sbd/kuis/hapus/{id}', [sbdkls4Controller::class, 'destroykuis']);
+    Route::post('/kelas4/sbd/addsubmission', [sbdkls4Controller::class, 'addsubmission']);
+    Route::get('/kelas4/sbd/submisionform/delete/{id}', [sbdkls4Controller::class, 'destroyformsubmit']);
+
+    
     // kelas 5
     // Matematika
     Route::get('/kelas5/matematika/tambah', [mtkkls5Controller::class, 'create']);
@@ -1509,6 +1611,108 @@ Route::middleware(['auth', 'cekLevel:guru'])->group(function () {
     Route::get('/kelas5/sbd/kuis/hapus/{id}', [sbdkls5Controller::class, 'destroykuis']);
     Route::post('/kelas5/sbd/addsubmission', [sbdkls5Controller::class, 'addsubmission']);
     Route::get('/kelas5/sbd/submisionform/delete/{id}', [sbdkls5Controller::class, 'destroyformsubmit']);
+
+
+    // kelas 6
+    // Matematika
+    Route::get('/kelas6/matematika/tambah', [mtkkls6Controller::class, 'create']);
+    Route::post('/kelas6/matematika/simpan', [mtkkls6Controller::class, 'add']);
+    Route::get('/kelas6/matematika/ubah/{id}', [mtkkls6Controller::class, 'edit']);
+    Route::post('/kelas6/matematika/update/{id}', [mtkkls6Controller::class, 'update']);
+    Route::get('/kelas6/matematika/hapus/{id}', [mtkkls6Controller::class, 'destroy']);
+    Route::get('/kelas6/matematika/kuis/tambah', [mtkkls6Controller::class, 'quiz']);
+    Route::post('/kelas6/matematika/kuis/simpan', [mtkkls6Controller::class, 'addquiz']);
+    Route::get('/kelas6/matematika/kuis/hapus/{id}', [mtkkls6Controller::class, 'destroykuis']);
+    Route::post('/kelas6/matematika/addsubmission', [mtkkls6Controller::class, 'addsubmission']);
+    Route::get('/kelas6/matematika/submisionform/delete/{id}', [mtkkls6Controller::class, 'destroyformsubmit']);
+    // Bahasa Indonesia
+    Route::get('/kelas6/bindonesia/tambah', [bindkls6Controller::class, 'create']);
+    Route::post('/kelas6/bindonesia/simpan', [bindkls6Controller::class, 'add']);
+    Route::get('/kelas6/bindonesia/ubah/{id}', [bindkls6Controller::class, 'edit']);
+    Route::post('/kelas6/bindonesia/update/{id}', [bindkls6Controller::class, 'update']);
+    Route::get('/kelas6/bindonesia/hapus/{id}', [bindkls6Controller::class, 'destroy']);
+    Route::get('/kelas6/bindonesia/kuis/tambah', [bindkls6Controller::class, 'quiz']);
+    Route::post('/kelas6/bindonesia/kuis/simpan', [bindkls6Controller::class, 'addquiz']);
+    Route::get('/kelas6/bindonesia/kuis/hapus/{id}', [bindkls6Controller::class, 'destroykuis']);
+    Route::post('/kelas6/bindonesia/addsubmission', [bindkls6Controller::class, 'addsubmission']);
+    Route::get('/kelas6/bindonesia/submisionform/delete/{id}', [bindkls6Controller::class, 'destroyformsubmit']);
+    // IPA
+    Route::get('/kelas6/ipa/tambah', [ipakls6Controller::class, 'create']);
+    Route::post('/kelas6/ipa/simpan', [ipakls6Controller::class, 'add']);
+    Route::get('/kelas6/ipa/ubah/{id}', [ipakls6Controller::class, 'edit']);
+    Route::post('/kelas6/ipa/update/{id}', [ipakls6Controller::class, 'update']);
+    Route::get('/kelas6/ipa/hapus/{id}', [ipakls6Controller::class, 'destroy']);
+    Route::get('/kelas6/ipa/kuis/tambah', [ipakls6Controller::class, 'quiz']);
+    Route::post('/kelas6/ipa/kuis/simpan', [ipakls6Controller::class, 'addquiz']);
+    Route::get('/kelas6/ipa/kuis/hapus/{id}', [ipakls6Controller::class, 'destroykuis']);
+    Route::post('/kelas6/ipa/addsubmission', [ipakls6Controller::class, 'addsubmission']);
+    Route::get('/kelas6/ipa/submisionform/delete/{id}', [ipakls6Controller::class, 'destroyformsubmit']);
+    // IPS
+    Route::get('/kelas6/ips/tambah', [ipskls6Controller::class, 'create']);
+    Route::post('/kelas6/ips/simpan', [ipskls6Controller::class, 'add']);
+    Route::get('/kelas6/ips/ubah/{id}', [ipskls6Controller::class, 'edit']);
+    Route::post('/kelas6/ips/update/{id}', [ipskls6Controller::class, 'update']);
+    Route::get('/kelas6/ips/hapus/{id}', [ipskls6Controller::class, 'destroy']);
+    Route::get('/kelas6/ips/kuis/tambah', [ipskls6Controller::class, 'quiz']);
+    Route::post('/kelas6/ips/kuis/simpan', [ipskls6Controller::class, 'addquiz']);
+    Route::get('/kelas6/ips/kuis/hapus/{id}', [ipskls6Controller::class, 'destroykuis']);
+    Route::post('/kelas6/ips/addsubmission', [ipskls6Controller::class, 'addsubmission']);
+    Route::get('/kelas6/ips/submisionform/delete/{id}', [ipskls6Controller::class, 'destroyformsubmit']);
+    // Olahraga
+    Route::get('/kelas6/pjk/tambah', [pjkkls6Controller::class, 'create']);
+    Route::post('/kelas6/pjk/simpan', [pjkkls6Controller::class, 'add']);
+    Route::get('/kelas6/pjk/ubah/{id}', [pjkkls6Controller::class, 'edit']);
+    Route::post('/kelas6/pjk/update/{id}', [pjkkls6Controller::class, 'update']);
+    Route::get('/kelas6/pjk/hapus/{id}', [pjkkls6Controller::class, 'destroy']);
+    Route::get('/kelas6/pjk/kuis/tambah', [pjkkls6Controller::class, 'quiz']);
+    Route::post('/kelas6/pjk/kuis/simpan', [pjkkls6Controller::class, 'addquiz']);
+    Route::get('/kelas6/pjk/kuis/hapus/{id}', [pjkkls6Controller::class, 'destroykuis']);
+    Route::post('/kelas6/pjk/addsubmission', [pjkkls6Controller::class, 'addsubmission']);
+    Route::get('/kelas6/pjk/submisionform/delete/{id}', [pjkkls6Controller::class, 'destroyformsubmit']);
+    // Muatan Lokal
+    Route::get('/kelas6/mulok/tambah', [mulokkls6Controller::class, 'create']);
+    Route::post('/kelas6/mulok/simpan', [mulokkls6Controller::class, 'add']);
+    Route::get('/kelas6/mulok/ubah/{id}', [mulokkls6Controller::class, 'edit']);
+    Route::post('/kelas6/mulok/update/{id}', [mulokkls6Controller::class, 'update']);
+    Route::get('/kelas6/mulok/hapus/{id}', [mulokkls6Controller::class, 'destroy']);
+    Route::get('/kelas6/mulok/kuis/tambah', [mulokkls6Controller::class, 'quiz']);
+    Route::post('/kelas6/mulok/kuis/simpan', [mulokkls6Controller::class, 'addquiz']);
+    Route::get('/kelas6/mulok/kuis/hapus/{id}', [mulokkls6Controller::class, 'destroykuis']);
+    Route::post('/kelas6/mulok/addsubmission', [mulokkls6Controller::class, 'addsubmission']);
+    Route::get('/kelas6/mulok/submisionform/delete/{id}', [mulokkls6Controller::class, 'destroyformsubmit']);
+    // PPKN
+    Route::get('/kelas6/ppkn/tambah', [ppknkls6Controller::class, 'create']);
+    Route::post('/kelas6/ppkn/simpan', [ppknkls6Controller::class, 'add']);
+    Route::get('/kelas6/ppkn/ubah/{id}', [ppknkls6Controller::class, 'edit']);
+    Route::post('/kelas6/ppkn/update/{id}', [ppknkls6Controller::class, 'update']);
+    Route::get('/kelas6/ppkn/hapus/{id}', [ppknkls6Controller::class, 'destroy']);
+    Route::get('/kelas6/ppkn/kuis/tambah', [ppknkls6Controller::class, 'quiz']);
+    Route::post('/kelas6/ppkn/kuis/simpan', [ppknkls6Controller::class, 'addquiz']);
+    Route::get('/kelas6/ppkn/kuis/hapus/{id}', [ppknkls6Controller::class, 'destroykuis']);
+    Route::post('/kelas6/ppkn/addsubmission', [ppknkls6Controller::class, 'addsubmission']);
+    Route::get('/kelas6/ppkn/submisionform/delete/{id}', [ppknkls6Controller::class, 'destroyformsubmit']);
+     // Agama
+     Route::get('/kelas6/agama/tambah', [agamakls6Controller::class, 'create']);
+     Route::post('/kelas6/agama/simpan', [agamakls6Controller::class, 'add']);
+     Route::get('/kelas6/agama/ubah/{id}', [agamakls6Controller::class, 'edit']);
+     Route::post('/kelas6/agama/update/{id}', [agamakls6Controller::class, 'update']);
+     Route::get('/kelas6/agama/hapus/{id}', [agamakls6Controller::class, 'destroy']);
+     Route::get('/kelas6/agama/kuis/tambah', [agamakls6Controller::class, 'quiz']);
+     Route::post('/kelas6/agama/kuis/simpan', [agamakls6Controller::class, 'addquiz']);
+     Route::get('/kelas6/agama/kuis/hapus/{id}', [agamakls6Controller::class, 'destroykuis']);
+     Route::post('/kelas6/agama/addsubmission', [agamakls6Controller::class, 'addsubmission']);
+     Route::get('/kelas6/agama/submisionform/delete/{id}', [agamakls6Controller::class, 'destroyformsubmit']);
+      // Seni Budaya
+    Route::get('/kelas6/sbd/tambah', [sbdkls6Controller::class, 'create']);
+    Route::post('/kelas6/sbd/simpan', [sbdkls6Controller::class, 'add']);
+    Route::get('/kelas6/sbd/ubah/{id}', [sbdkls6Controller::class, 'edit']);
+    Route::post('/kelas6/sbd/update/{id}', [sbdkls6Controller::class, 'update']);
+    Route::get('/kelas6/sbd/hapus/{id}', [sbdkls6Controller::class, 'destroy']);
+    Route::get('/kelas6/sbd/kuis/tambah', [sbdkls6Controller::class, 'quiz']);
+    Route::post('/kelas6/sbd/kuis/simpan', [sbdkls6Controller::class, 'addquiz']);
+    Route::get('/kelas6/sbd/kuis/hapus/{id}', [sbdkls6Controller::class, 'destroykuis']);
+    Route::post('/kelas6/sbd/addsubmission', [sbdkls6Controller::class, 'addsubmission']);
+    Route::get('/kelas6/sbd/submisionform/delete/{id}', [sbdkls6Controller::class, 'destroyformsubmit']);
 
     
 
