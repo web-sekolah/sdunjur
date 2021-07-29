@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <title>School Web</title>
     <style>
       body{
@@ -279,6 +278,34 @@
         </div> 
         </div><br>
       </div>
+      </div>
+      </div>
+    </div>
+    <style>
+      .footer{
+        font-family: fontgua;
+      }
+      .bg{
+        background: linear-gradient(to bottom right, #6699ff 0%, #00ffff 100%);
+      }
+      a{
+        cursor: pointer;
+      }
+    </style>
+      <footer>
+        <div class="bg p-2">
+            <div class="d-flex mt-4 justify-content-center container text-light m-2 text-center">
+              <div class="d-flex">
+                <a href="https://www.del.ac.id/"><img class="" style="width: 48px;" src="{{asset('gambar/itdel.png')}}" alt=""></a>&nbsp;&nbsp;&nbsp;
+                <a class="footer d-flex link-light">
+                  <img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<h5 class="mt-4"> BackToSchool</h5>
+                </a>
+              </div>
+            </div>
+          <p class="text-center text-light mt-4">Copyright &copy;2021 | Program Pengabdian Masyarakat <a class="" href="https://www.del.ac.id/" style="color: yellow">Institut Teknologi Del</a></p>
+        </div>
+      </footer>
+      
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
