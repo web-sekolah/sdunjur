@@ -165,13 +165,11 @@ use App\Http\Controllers\Auth\LoginController;
 Auth::routes();
 Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'login'])->name('login');
-Route::get('login2', function () {
-    return view('auth.login');
-});
 
 Route::group(['middleware' => 'auth'],function(){
 
-    Route::get('dashboard', function () {
+
+    Route::get('/dashboard', function () {
         return view('home');
     });
     Route::get('/register', function (){

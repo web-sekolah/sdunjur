@@ -123,7 +123,7 @@
                     <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('username') }}</label>
 
                     <div class="col-md-6">
-                        <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username">
+                        <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username">
                         @error('username')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -136,7 +136,6 @@
                     <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Level') }}</label>
 
                     <div class="col-md-6">
-                        {{-- <input id="level" type="level" class="form-control @error('level') is-invalid @enderror" name="level" value="{{ old('level') }}" required autocomplete="level"> --}}
                         <select id="level" class="form-select" aria-label="Default select example" @error('level') is-invalid @enderror" name="level" value="{{ old('level') }}" required autocomplete="level">
                             <option selected value="siswa">Siswa</option>
                             <option value="guru">Guru</option>
