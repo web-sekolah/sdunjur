@@ -38,6 +38,7 @@ class RegisterController extends Controller
     {   
         // return '/register'->with('success', 'User baru telah berhasil di didaftarkan');
         // return back();
+        session()->flash('success', 'Pengguna baru berhasil didaftarkan'); 
         return '/register';
     }
 
