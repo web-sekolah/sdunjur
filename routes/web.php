@@ -182,7 +182,8 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'],function(){
 
-    Route::get('dashboard', function () {
+
+    Route::get('/dashboard', function () {
         return view('home');
     });
     // kelas 1
