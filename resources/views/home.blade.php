@@ -120,11 +120,28 @@
                 <!-- <li class="nav-item">
                   <a href="/tanyajawab/matematika" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Ruang Bertanya</a>
                 </li> -->
-                @if (auth()->user()->level=="guru")
+                {{-- @if (auth()->user()->level=="guru") --}}
                 <li class="nav-item">
+                  @if (Route::has('register'))
+                  <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+              @endif
                   <a href="{{ route('register') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-user-plus"></i> Tambah Pengguna</a>
                 </li>
-                @endif
+                {{-- @endif --}}
+                <li class="nav-item">
+              
+                </li>
+                {{-- @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+
+                      
+                    @endauth
+                </div>
+            @endif --}}
                 <li class="nav-item dropstart">
                   <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fas fa-user-graduate @if (auth()->user()->level=="guru") d-none @endif"></i>
@@ -211,6 +228,23 @@
                   <p class="card-text fw-bold">Klik tombol untuk memasuki kelas</p>
                   <a href="{{ route('kelas3') }}" class="btn btn-success rounded-pill"><i class="far fa-play-circle"></i> Masuk kelas</a>
                 </div>
+
+                <div class="">
+                  <a class="" href="{{ route('logout') }}"
+                     onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                  </a>
+          
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                      @csrf
+                  </form>
+              </div>
+asasfasfas
+
+
+
+
               </div>
             </div>
           </div>

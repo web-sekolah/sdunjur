@@ -13,20 +13,20 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function login(Request $request){
-        $data = User::where('email',$request->email)->first();
-        // if($data){
-        //     if(Hash::check($request->password,$data->password)){
-        //         session(['berhasil_login' => true]);
-        //         return redirect('/index');
-        //     }  
-        //     return redirect('/')->with('message','Email atau Password salah');
-        // }
-            // if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
-            //     return redirect('/dashboard');
-            // }
-            // return redirect('/')->with('message','Email atau Password salah');
-    }
+    // public function login(Request $request){
+    //     $data = User::where('username',$request->username)->first();
+    //     if($data){
+    //         if(Hash::check($request->password,$data->password)){
+    //             session(['berhasil_login' => true]);
+    //             return redirect('/dashboard');
+    //         }  
+    //         return redirect('/')->with('message','Email atau Password salah');
+    //     }
+    //         if(Auth::attempt(['username'=>$request->email,'password'=>$request->password])){
+    //             return redirect('/dashboard');
+    //         }
+    //         return redirect('/')->with('message','Email atau Password salah');
+    // }
 
     public function logout(Request $request){
         // $request->session()->flush();

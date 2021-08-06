@@ -148,7 +148,7 @@ use App\Http\Controllers\ruangtanya6\tanyaagamaController6;
 
 
 use App\Http\Middleware\CekloginMiddelware;
-use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -159,25 +159,32 @@ use App\Http\Controllers\Auth\LoginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/welcome', function () {
+//   return view('welcome');
+// });
 
-
-// Route::post('/', [LoginController::class, 'login'])->name('login');
-Auth::routes();
-Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/', [LoginController::class, 'login'])->name('login');
-Route::get('login2', function () {
-    return view('auth.login');
+Route::get('/', function () {
+  return view('login');
 });
+
+Auth::routes();
+// Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
+
+// Route::post('/login', [LoginController::class, 'login'])->name('login');
+
+// Route::get('login', function () {
+//     return view('auth.login');
+// });
+
+// Route::get('/register', function (){
+//   return view('auth/register');
+// })->name('register');
 
 Route::group(['middleware' => 'auth'],function(){
 
     Route::get('dashboard', function () {
         return view('home');
     });
-    Route::get('/register', function (){
-        return view('auth/register');
-    })->name('register');
-
     // kelas 1
     Route::get('/kelas1', [kelas1Controller::class, 'index'])->name('kelas1');
     // Matematika 
