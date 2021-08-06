@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-    <title>Hello, world!</title>
+    <title>Register</title>
     <style>
         .form-group{
             margin-bottom: 10px;
@@ -137,8 +137,8 @@
                     <div class="col-md-6">
                         {{-- <input id="level" type="level" class="form-control @error('level') is-invalid @enderror" name="level" value="{{ old('level') }}" autocomplete="level"> --}}
                         <select id="level" class="form-select" aria-label="Default select example" @error('level') is-invalid @enderror" name="level" value="{{ old('level') }}" autocomplete="level">
-                            <option selected value="siswa">Siswa</option>
-                            <option value="guru">Guru</option>
+                            <option selected value="guru">Guru</option>
+                            <option value="siswa">Siswa</option>
                           </select>
                         @error('level')
                             <span class="invalid-feedback" role="alert">
@@ -152,9 +152,9 @@
                     <label for="kelas" class="col-md-4 col-form-label text-md-right">{{ __('Kelas') }}</label>
 
                     <div class="col-md-6">
-                        {{-- <input id="kelas" type="kelas" class="form-control @error('kelas') is-invalid @enderror" name="kelas" value="{{ old('kelas') }}" autocomplete="kelas"> --}}
                         <select id="kelas" class="form-select" aria-label="Default select example" @error('kelas') is-invalid @enderror" name="kelas" value="{{ old('kelas') }}" autocomplete="kelas">
-                            <option selected value="1">1</option>
+                            <option selected value="0">-</option>
+                            <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
@@ -204,7 +204,14 @@
         </div>
     </div>
     <br>
+    <!-- Kelas Input Form Show & Hide -->
+    <script>
+        $(document).ready(function () {
+        });
+    </script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
     @include('sweetalert::alert')
   </body>
 </html>
