@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
+
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
@@ -27,9 +30,15 @@ class RegisterController extends Controller
     /**
      * Where to redirect users after registration.
      *
-     * @var string
+    //  * @var string
      */
-    protected $redirectTo = RouteServiceProvider::DASHBOARD;
+    // protected $redirectTo = RouteServiceProvider::REGISTER;
+    protected function redirectTo()
+    {   
+        session()->flash('success', 'User baru telah berhasil di didaftarkan'); 
+        return '/register';
+    }
+
 
     /**
      * Create a new controller instance.
@@ -53,6 +62,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'level' => ['required', 'string'],
+            'kelas' => ['string'],
             'username' => ['required', 'string','unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -69,9 +79,22 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'kelas' => $data['kelas'],
             'username' => $data['username'],
             'level' => $data['level'],
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        return $this->registered($request, $user)
+            ?: redirect($this->redirectPath());
+    }
+
+   
 }

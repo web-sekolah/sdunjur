@@ -84,7 +84,8 @@
         }
     </style>
   </head>
-  <body style="background-image: url('{{asset('gambar/bgberanda.jpg')}}')"><br><br><br><br>
+  <body style="background-image: url('{{asset('gambar/bgberanda.jpg')}}')"><br><br>
+    <br><br>
     <div class="mapelcaption container" style="width: max-content; padding: 42px; border-radius: 5px; background-image: url('{{ asset('gambar/chalkboard.jpg') }}');" >
         <h2 class="text-center"><i class="fas fa-user-plus"></i> REGISTER</h2><br><br>
         <div  class="container">
@@ -131,7 +132,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Level') }}</label>
+                    <label for="level" class="col-md-4 col-form-label text-md-right">{{ __('Level') }}</label>
 
                     <div class="col-md-6">
                         {{-- <input id="level" type="level" class="form-control @error('level') is-invalid @enderror" name="level" value="{{ old('level') }}" autocomplete="level"> --}}
@@ -140,6 +141,27 @@
                             <option value="guru">Guru</option>
                           </select>
                         @error('level')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="kelas" class="col-md-4 col-form-label text-md-right">{{ __('Kelas') }}</label>
+
+                    <div class="col-md-6">
+                        {{-- <input id="kelas" type="kelas" class="form-control @error('kelas') is-invalid @enderror" name="kelas" value="{{ old('kelas') }}" autocomplete="kelas"> --}}
+                        <select id="kelas" class="form-select" aria-label="Default select example" @error('kelas') is-invalid @enderror" name="kelas" value="{{ old('kelas') }}" autocomplete="kelas">
+                            <option selected value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                          </select>
+                        @error('kelas')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -182,21 +204,7 @@
         </div>
     </div>
     <br>
-
-    {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    @error ('username')
-    <script src="{{ asset('js/loginalert.js') }}"></script>
-    @enderror
-    @error ('password')
-    <script src="{{ asset('js/loginalert2.js') }}"></script>
-    @enderror
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-    {{-- @include('sweetalert::alert') --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @include('sweetalert::alert')
   </body>
 </html>

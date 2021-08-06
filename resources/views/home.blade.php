@@ -122,9 +122,6 @@
                 </li> -->
                 {{-- @if (auth()->user()->level=="guru") --}}
                 <li class="nav-item">
-                  @if (Route::has('register'))
-                  <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-              @endif
                   <a href="{{ route('register') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-user-plus"></i> Tambah Pengguna</a>
                 </li>
                 {{-- @endif --}}
@@ -228,23 +225,6 @@
                   <p class="card-text fw-bold">Klik tombol untuk memasuki kelas</p>
                   <a href="{{ route('kelas3') }}" class="btn btn-success rounded-pill"><i class="far fa-play-circle"></i> Masuk kelas</a>
                 </div>
-
-                <div class="">
-                  <a class="" href="{{ route('logout') }}"
-                     onclick="event.preventDefault();
-                                   document.getElementById('logout-form').submit();">
-                      {{ __('Logout') }}
-                  </a>
-          
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                      @csrf
-                  </form>
-              </div>
-asasfasfas
-
-
-
-
               </div>
             </div>
           </div>
