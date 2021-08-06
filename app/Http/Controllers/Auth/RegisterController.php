@@ -8,6 +8,7 @@ use Illuminate\Auth\Events\Registered;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Http\Controllers\Auth\Redirect;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -35,7 +36,8 @@ class RegisterController extends Controller
     // protected $redirectTo = RouteServiceProvider::REGISTER;
     protected function redirectTo()
     {   
-        session()->flash('success', 'User baru telah berhasil di didaftarkan'); 
+        // return '/register'->with('success', 'User baru telah berhasil di didaftarkan');
+        // return back();
         return '/register';
     }
 
@@ -46,7 +48,8 @@ class RegisterController extends Controller
      * @return void
      */
     public function __construct()
-    {
+    {   
+
         $this->middleware('free');
     }
 
