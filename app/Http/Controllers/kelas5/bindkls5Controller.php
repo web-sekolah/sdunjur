@@ -26,7 +26,7 @@ class bindkls5Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')->get();
         }else{
             $data = bindkls5::all();
             $submit = kls5bindsubmision::orderBy('id','desc')->get();

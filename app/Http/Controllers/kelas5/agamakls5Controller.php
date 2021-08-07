@@ -26,7 +26,7 @@ class agamakls5Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')->get();
         }else{
             $data = agamakls5::all();
             $submit = kls5agamasubsmision::orderBy('id','desc')->get();

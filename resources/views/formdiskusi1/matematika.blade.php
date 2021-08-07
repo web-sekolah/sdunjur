@@ -94,6 +94,14 @@
         </div>
       </nav>
       <br>
+      {{-- @php $count = 1 @endphp
+      @foreach ($reply as $jumlah)
+      @if($komen->id == $jumlah->comment_id)
+        <p class="d-none">{{$jumlah->id}}</p>
+        @php $cnt = $count++ @endphp
+      @endif
+      @foreach --}}
+
       @error('comment')
       <div class="alert alert-danger container alert-dismissible fade show" role="alert">
         <i class="fas fa-exclamation-triangle"></i> <strong> {{$message}}</strong>
@@ -228,7 +236,8 @@
                         @if (Auth::user()->name == $user2->name)
                        background-color: #EAE7AB;"
                         @endif>
-                            <small style="">{!! $user2->comment !!}</small> 
+                            <small style="">{!! $user2->comment !!} 
+                            </small> 
                         </div>
                     </div>
                     @endif

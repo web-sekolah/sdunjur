@@ -26,8 +26,7 @@ class bindkls4Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')
-            ->paginate(10);
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')->get();
         }else{
             $data = bindkls4::paginate(10);
             $submit = kls4bindsubmision::orderBy('id','desc')->get();

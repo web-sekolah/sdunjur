@@ -8,7 +8,6 @@ use Illuminate\Auth\Events\Registered;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
-use App\Http\Controllers\Auth\Redirect;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -37,7 +36,7 @@ class RegisterController extends Controller
     protected function redirectTo()
     {   
         // return '/register'->with('success', 'User baru telah berhasil di didaftarkan');
-        // return back();
+        session()->flash('success', 'User baru telah berhasil di didaftarkan');
         return '/register';
     }
 
@@ -66,6 +65,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'level' => ['required', 'string'],
             'kelas' => ['string'],
+            'sex' => ['string'],
             'username' => ['required', 'string','unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -83,6 +83,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'kelas' => $data['kelas'],
+            'sex' => $data['sex'],
             'username' => $data['username'],
             'level' => $data['level'],
             'password' => Hash::make($data['password']),

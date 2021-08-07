@@ -170,6 +170,23 @@
                 </div>
 
                 <div class="form-group row">
+                    <label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Jenis Kelamin') }}</label>
+
+                    <div class="col-md-6">
+                        {{-- <input id="sex" type="sex" class="form-control @error('sex') is-invalid @enderror" name="sex" value="{{ old('sex') }}" autocomplete="sex"> --}}
+                        <select id="sex" class="form-select" aria-label="Default select example" @error('sex') is-invalid @enderror" name="sex" value="{{ old('sex') }}" autocomplete="sex">
+                            <option selected value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                          </select>
+                        @error('kelas')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="form-group row">
                     <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                     <div class="col-md-6">
@@ -196,7 +213,7 @@
                         <button type="submit" class="btn btn-primary">
                             {{ __('Register') }}
                         </button>
-                        <a class="btn btn bg-tranparent" href="/dashboard"><< Back</a>
+                        <a class="btn btn bg-tranparent" href="/user"><< Back</a>
                     </div>
                 </div>
             </form>

@@ -26,7 +26,7 @@ class ppknkls1Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')->get();
         }else{
             $data = ppknkls1::all();
             $submit = kls1ppknsubmision::orderBy('id','desc')->get();

@@ -26,7 +26,7 @@ class sbdkls3Controller extends Controller
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
             ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%');
+            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')->get();
         }else{
             $data = sbdkls3::all();
             $submit = kls3sbdsubsmision::orderBy('id','desc')->get();

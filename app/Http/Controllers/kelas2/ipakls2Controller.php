@@ -25,9 +25,7 @@ class ipakls2Controller extends Controller
             ->orWhere('waktumulai','LIKE','%'.$request->keyword.'%')
             ->orWhere('waktuselesai','LIKE','%'.$request->keyword.'%')
             ->orWhere('vidio','LIKE','%'.$request->keyword.'%')
-            ->orWhere('file','LIKE','%'.$request->keyword.'%')
-            ->orWhere('deskripsi','LIKE','%'.$request->keyword.'%')
-            ->paginate(10);
+            ->orWhere('file','LIKE','%'.$request->keyword.'%')->get();
         }else{
             $data = ipakls2::paginate(10);
             $submit = kls2ipasubmision::orderBy('id','desc')->get();

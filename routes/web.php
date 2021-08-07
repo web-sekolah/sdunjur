@@ -2,6 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\LoginController;
+// User
+use App\Http\Controllers\user\userkls1Controller;
+use App\Http\Controllers\user\userkls2Controller;
+use App\Http\Controllers\user\userkls3Controller;
+use App\Http\Controllers\user\userkls4Controller;
+use App\Http\Controllers\user\userkls5Controller;
+use App\Http\Controllers\user\userkls6Controller;
+use App\Http\Controllers\user\userguruController;
+
 // kelas 1
 use App\Http\Controllers\kelas1Controller;
 use App\Http\Controllers\kelas1\mtkkls1Controller;
@@ -165,6 +174,10 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/', function () {
   return view('login');
+});
+
+Route::get('/daftar', function () {
+  return view('user');
 });
 
 Auth::routes();
@@ -1113,6 +1126,31 @@ Route::group(['middleware' => 'auth'],function(){
 
 // LEVEL GURU
 Route::middleware(['auth', 'cekLevel:guru'])->group(function () {
+    //USER
+    Route::get('/user', [userkls1Controller::class, 'dashboard']);
+    // kelas 1
+    Route::get('/userkls1', [userkls1Controller::class, 'index']);
+    Route::get('/user/kelas1/hapus/{id}', [userkls1Controller::class, 'destroy']);
+     // kelas 2
+     Route::get('/userkls2', [userkls2Controller::class, 'index']);
+     Route::get('/user/kelas2/hapus/{id}', [userkls2Controller::class, 'destroy']);
+      // kelas 3
+    Route::get('/userkls3', [userkls3Controller::class, 'index']);
+    Route::get('/user/kelas3/hapus/{id}', [userkls3Controller::class, 'destroy']);
+     // kelas 4
+     Route::get('/userkls4', [userkls4Controller::class, 'index']);
+     Route::get('/user/kelas4/hapus/{id}', [userkls4Controller::class, 'destroy']);
+      // kelas 5
+    Route::get('/userkls5', [userkls5Controller::class, 'index']);
+    Route::get('/user/kelas5/hapus/{id}', [userkls5Controller::class, 'destroy']);
+     // kelas 6
+     Route::get('/userkls6', [userkls6Controller::class, 'index']);
+     Route::get('/user/kelas6/hapus/{id}', [userkls6Controller::class, 'destroy']);
+      // guru
+    Route::get('/userguru', [userguruController::class, 'index']);
+    Route::get('/user/guru/hapus/{id}', [userguruController::class, 'destroy']);
+
+
     // kelas 1
     // Matematika
     Route::get('/kelas1/matematika/tambah', [mtkkls1Controller::class, 'create']);

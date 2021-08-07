@@ -120,11 +120,11 @@
                 <!-- <li class="nav-item">
                   <a href="/tanyajawab/matematika" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-comments"></i> Ruang Bertanya</a>
                 </li> -->
-                {{-- @if (auth()->user()->level=="guru") --}}
+                @if (auth()->user()->level=="guru")
                 <li class="nav-item">
-                  <a href="{{ route('register') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-user-plus"></i> Tambah Pengguna</a>
+                  <a href="/user" class="nav-link container text-light" aria-current="page" ><i class="fas fa-user-plus"></i> Kelola Pengguna</a>
                 </li>
-                {{-- @endif --}}
+                @endif
                 <li class="nav-item">
               
                 </li>
