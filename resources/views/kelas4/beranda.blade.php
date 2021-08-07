@@ -64,7 +64,7 @@
   <body style="background-image: url('{{ asset('gambar/bgberanda.jpg') }}')">
     <nav class="navbar container mt-3 navbar-expand-lg navbar-light bg-transparent">
         <div class="container">
-          <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<h5 class="mt-4"> BackToSchool</h5></a>
+        <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<img src="{{asset('gambar/logo.png')}}" width="125" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </button>
@@ -281,9 +281,7 @@
       <div class="bg p-2">
           <div class="d-flex mt-4">
             <a href="https://www.del.ac.id/"><img class="" style="width: 48px;" src="{{asset('gambar/itdel.png')}}" alt=""></a>&nbsp;&nbsp;&nbsp;
-            <a class="footer d-flex link-light">
-              <img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<h5 class="mt-4"> BackToSchool</h5>
-            </a>
+            <a class="footer d-flex link-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<img src="{{asset('gambar/logo.png')}}" width="125" alt=""></a>
           </div>
         <p class="text-center text-light mt-4">Copyright &copy;2021 | Program Pengabdian Masyarakat <a class="" href="https://www.del.ac.id/" style="color: yellow">Institut Teknologi Del</a></p>
       </div>

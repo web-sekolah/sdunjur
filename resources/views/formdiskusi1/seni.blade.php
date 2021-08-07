@@ -52,14 +52,14 @@
   <body style="background-image: url('{{asset('../gambar/bgchat2.jpg')}}')">
     <nav class="navbar  navbar-expand-lg navbar-light bg-transparent">
         <div class="container">
-          <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<h5 class="mt-4"> BackToSchool</h5></a>
+        <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<img src="{{asset('gambar/logo.png')}}" width="125" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
+                    <a href="/dashboard" class="nav-link container text-light" aria-current="page"><i class="fas fa-home"></i> Home</a>
                   </li>
                   <li class="nav-item">
                     <a href="/kelas1" class="nav-link container text-light" aria-current="page" href="/kelas1"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kelas 1</a>

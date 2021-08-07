@@ -101,7 +101,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                    <a href="/dashboard" class="nav-link container text-light" aria-current="page" href="/dashboard"><i class="fas fa-home"></i> Home</a>
+            <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<img src="{{asset('gambar/logo.png')}}" width="125" alt=""></a>
                   </li>
                   <li class="nav-item">
                     <a href="/kelas2/ObrolanKelas/tanyajawab/muatanlokal" class="nav-link container text-light" aria-current="page" href="/kelas2/ObrolanKelas/tanyajawab/muatanlokal"><i class="fas fa-comments"></i> Ruang Tanya</a>
