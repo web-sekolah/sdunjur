@@ -8,6 +8,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
+        body{
+            /* background-color: #D5DBDB;  */
+            background-color: #EAEDED;
+            /* background-color: #F4F6F6;  */
+        }
         *{
             
         }
@@ -18,15 +23,16 @@
             box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
         }
         .tab-pane{
-            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+            /* box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <title>SIKKOLA</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+    <nav class="navbar text-light navbar-expand-lg navbar-dark" style="background-color: #424949;">
+        <div class="container" style="padding: 10px;">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -304,7 +310,7 @@
         
 
         <div class="col-md-10">
-          <div class="tab-content" id="nav-tabContent">
+          <div class="tab-content bg-light" id="nav-tabContent">
             <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><br>
                 <h2 class="text-center text-muted"><i class="fas fa-server"></i> DASHBOARD</h2><br>
                 <div class="row container">
