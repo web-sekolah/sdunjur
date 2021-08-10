@@ -30,10 +30,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <title>SIKKOLA</title>
   </head>
-  <body>
-    <nav class="navbar text-light navbar-expand-lg navbar-dark" style="background-color: #424949;">
-        <div class="container" style="padding: 10px;">
-          <a class="navbar-brand" href="#">Navbar</a>
+  <body style="background-image: url('{{ 'gambar/bglogin.jpg' }}');">
+    <nav class="navbar text-light navbar-expand-lg navbar-dark mx-5 mt-3 rounded-pill" style="background-color: #424949;">
+        <div class="container">
+        <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<img src="{{asset('gambar/logo.png')}}" width="125" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
