@@ -1690,7 +1690,7 @@
                   {{-- form tambah submission --}}
                   <div class="card mb-4 formtambah">
                     <div class="card-header text-center">
-                      Tambah Submission
+                      Tambah Tugas
                     </div>
                     <div class="card-body container">
                       {{-- alert error --}}
@@ -1776,7 +1776,7 @@
                       <br>
                         <button type="submit" class="btn btn-outline-secondary kumpul-tugas{{$sub->id}}"><i class="fas fa-upload"></i> Kumpulkan Tugas</button>
                         @if (auth()->user()->level=="guru")
-                        <a class="btn btn-outline-secondary" data-bs-toggle="offcanvas" href="#daftarsubmit{{$sub->id}}" role="button" aria-controls="offcanvasExample"><i class="fas fa-list-ul"></i> Daftar Submision</a>
+                        <a class="btn btn-outline-secondary" data-bs-toggle="offcanvas" href="#daftarsubmit{{$sub->id}}" role="button" aria-controls="offcanvasExample"><i class="fas fa-list-ul"></i> Daftar Tugas</a>
                         @endif
                     </form>
                     </div>

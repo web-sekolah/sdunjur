@@ -94,7 +94,7 @@
   <body style="background-image: url('{{ asset('gambar/bgberanda.jpg') }}')">
     <nav class="navbar  navbar-expand-lg navbar-light bg-transparent">
         <div class="container">
-        <a class="navbar-brand d-flex text-light" href="#"><img src="{{asset('gambar/logo.png')}}" width="90" alt=""></a>
+          <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<h5 class="mt-4"> BackToSchool</h5></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </button>
@@ -1690,7 +1690,7 @@
                   {{-- form tambah submission --}}
                   <div class="card mb-4 formtambah">
                     <div class="card-header text-center">
-                      Tambah Submission
+                      Tambah Tugas
                     </div>
                     <div class="card-body container">
                       {{-- alert error --}}
@@ -1776,7 +1776,7 @@
                       <br>
                         <button type="submit" class="btn btn-outline-secondary kumpul-tugas{{$sub->id}}"><i class="fas fa-upload"></i> Kumpulkan Tugas</button>
                         @if (auth()->user()->level=="guru")
-                        <a class="btn btn-outline-secondary" data-bs-toggle="offcanvas" href="#daftarsubmit{{$sub->id}}" role="button" aria-controls="offcanvasExample"><i class="fas fa-list-ul"></i> Daftar Submision</a>
+                        <a class="btn btn-outline-secondary" data-bs-toggle="offcanvas" href="#daftarsubmit{{$sub->id}}" role="button" aria-controls="offcanvasExample"><i class="fas fa-list-ul"></i> Daftar Tugas</a>
                         @endif
                     </form>
                     </div>
@@ -1785,7 +1785,7 @@
                     {{-- daftar submision --}}
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="daftarsubmit{{$sub->id}}" aria-labelledby="offcanvasExampleLabel">
                       <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Daftar Submision</h5>
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Daftar Tugas</h5>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                       </div>
                       <div class="offcanvas-body">
