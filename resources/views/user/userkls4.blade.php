@@ -29,7 +29,10 @@
   <body style="background-image: url('{{ 'gambar/bglogin.jpg' }}');">
   <nav class="navbar text-light navbar-expand-lg navbar-dark mx-5 mt-3 rounded-pill" style="background-color: #424949;">
         <div class="container">
-      <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<img src="{{asset('gambar/logo.png')}}" width="125" alt=""></a>
+              
+          <!-- Logo Layout -->
+          @include('layouts.logo')
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

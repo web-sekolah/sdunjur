@@ -94,7 +94,10 @@
   <body style="background-image: url('{{ asset('gambar/bgberanda.jpg') }}')">
     <nav class="navbar  navbar-expand-lg navbar-light bg-transparent">
         <div class="container">
-        <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<img src="{{asset('gambar/logo.png')}}" width="125" alt=""></a>
+               
+          <!-- Logo Layout -->
+          @include('layouts.logo')
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </button>
