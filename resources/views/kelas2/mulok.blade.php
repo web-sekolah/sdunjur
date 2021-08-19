@@ -94,15 +94,15 @@
   <body style="background-image: url('{{ asset('gambar/bgberanda.jpg') }}')">
     <nav class="navbar  navbar-expand-lg navbar-light bg-transparent">
         <div class="container">
-          <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<h5 class="mt-4"> BackToSchool</h5></a>
+          
+          <!-- Logo Layout -->
+          @include('layouts.logo')
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-            <a class="navbar-brand d-flex text-light" href="#"><img style="width: 60px;" src="{{asset('gambar/index.png')}}" alt="">&nbsp;<img src="{{asset('gambar/logo.png')}}" width="125" alt=""></a>
-                  </li>
                   <li class="nav-item">
                     <a href="/kelas2/ObrolanKelas/tanyajawab/muatanlokal" class="nav-link container text-light" aria-current="page" href="/kelas2/ObrolanKelas/tanyajawab/muatanlokal"><i class="fas fa-comments"></i> Ruang Tanya</a>
                   </li>

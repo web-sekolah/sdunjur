@@ -1,0 +1,1 @@
+<a class="navbar-brand d-flex text-light" href="#"><img src="{{asset('gambar/logo.png')}}" width="90" alt=""></a>
