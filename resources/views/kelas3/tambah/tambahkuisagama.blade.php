@@ -156,7 +156,7 @@
                     <textarea class="form-control" name="keterangan" id="keterangan" cols="15" rows="5">{{ old('keterangan')}} </textarea>
                 </div>
                 <div class="col-md-6 mt-3">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Publish</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Tambah</button>
                     <button type="reset" class="btn btn-secondary"><i class="fas fa-trash"></i> Hapus</button>
                 </div>
               </div>

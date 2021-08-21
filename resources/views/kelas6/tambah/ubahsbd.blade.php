@@ -165,7 +165,7 @@
                     <textarea class="form-control" name="deskripsi" id="deskripsi" cols="15" rows="5">{!! $matka->deskripsi !!}</textarea>
                 </div>
                 <div class="col-md-6 mt-3">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
                     <button type="reset" class="btn btn-secondary"><i class="fas fa-trash"></i> Hapus</button>
                 </div>
               </div>
