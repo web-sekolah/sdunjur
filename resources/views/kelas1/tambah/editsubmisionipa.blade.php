@@ -120,7 +120,7 @@
                     <input name="submit_id" value="{{ $submited->submit_id }}" class="form-control form-sm" type="hidden">
                 </div>
                 <center>
-                  <button class="btn btn-success"><i class="fas fa-pen"></i> Update</button>
+                  <button class="btn btn-success"><i class="fas fa-pen"></i> Ubah</button>
                 </center>
               </div>
         </form>
