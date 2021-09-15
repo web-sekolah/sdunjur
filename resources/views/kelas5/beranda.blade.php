@@ -79,15 +79,28 @@
                 <li class="nav-item">
                     <a href="kelas5/ObrolanKelas" class="nav-link container text-light" aria-current="page" href="kelas5/ObrolanKelas"><i class="fas fa-comments"></i> Ruang Bertanya</a>
                 </li>
-              <li class="nav-item">
-                <a href="{{ route('logout') }}" class="nav-link container text-light" aria-current="page" href="#"><i class="fas fa-power-off"></i> Logout</a>
-              </li>
-              {{-- <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li> --}}
+                <li class="nav-item dropstart">
+                  <a class="nav-link dropdown-toggle  text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user-graduate @if (auth()->user()->level=="guru") d-none @endif"></i>
+                    @if (auth()->user()->level=="guru")
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    @endif
+                    {{ Auth::user()->username }}
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink" style="width: max-content;">
+                    <li><a class="dropdown-item disabled text-muted">{{ Auth::user()->name }}</a></li>
+                    <li>
+                      <a class="dropdown-item text-danger" aria-current="page" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                      <i class="fas fa-power-off"></i> {{ __('Logout') }}
+                      </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                    </form>
+                    </li>
+                      </ul>
+                </li>
             </ul>
           </div>
         </div>
