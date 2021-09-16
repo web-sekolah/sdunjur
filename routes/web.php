@@ -197,9 +197,6 @@ Route::group(['middleware' => 'auth'],function(){
         return view('home');
     });
 
-    Route::get('/register', function (){
-      return view('auth/register');
-    })->name('register');
 
     // kelas 1
     Route::get('/kelas1', [kelas1Controller::class, 'index'])->name('kelas1');
@@ -1130,6 +1127,11 @@ Route::group(['middleware' => 'auth'],function(){
 Route::middleware(['auth', 'cekLevel:guru'])->group(function () {
     //USER
     Route::get('/user', [userkls1Controller::class, 'dashboard']);
+
+    Route::get('/register', function (){
+      return view('auth/register');
+    })->name('register');
+
     // kelas 1
     Route::get('/userkls1', [userkls1Controller::class, 'index']);
     Route::get('/user/kelas1/hapus/{id}', [userkls1Controller::class, 'destroy']);
