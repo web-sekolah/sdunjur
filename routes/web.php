@@ -189,9 +189,6 @@ Auth::routes();
 //     return view('auth.login');
 // });
 
-// Route::get('/register', function (){
-//   return view('auth/register');
-// })->name('register');
 
 Route::group(['middleware' => 'auth'],function(){
 
@@ -199,6 +196,11 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/dashboard', function () {
         return view('home');
     });
+
+    Route::get('/register', function (){
+      return view('auth/register');
+    })->name('register');
+
     // kelas 1
     Route::get('/kelas1', [kelas1Controller::class, 'index'])->name('kelas1');
     // Matematika 
